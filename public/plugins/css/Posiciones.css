@@ -1,0 +1,34 @@
+section, div {
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     width: 95%;
+}
+
+.centrado {
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     width: 95%;
+}
+
+#tablaPersonas{
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     width: 100%;
+}
+
+form{
+    position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     width: 90%;
+}
+
+footer{
+    position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     width: 90%;
+}
