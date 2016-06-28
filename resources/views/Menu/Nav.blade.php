@@ -1,97 +1,40 @@
-<link rel="stylesheet" href="{{ asset('plugins/css/sticky.css') }}"/>
-<link rel="stylesheet" href="{{ asset('plugins/css/NavBarV.css') }}"/>
-<header role="banner">
-  <nav class="nav" role="navigation">
-    <ul class="nav__list">
-      <li>
-        <input id="group-1" type="checkbox" hidden />
-        <label for="group-1"><span class="fa fa-angle-right"></span> First level</label>
-        <ul class="group-list">
-          <li><a href="#">1st level item</a></li>
-          <li>
-            <input id="sub-group-1" type="checkbox" hidden />
-            <label for="sub-group-1"><span class="fa fa-angle-right"></span> Second level</label>
-            <ul class="sub-group-list">
-              <li><a href="#">2nd level nav item</a></li>
-              <li><a href="#">2nd level nav item</a></li>
-              <li><a href="#">2nd level nav item</a></li>
-              <li>
-                <input id="sub-sub-group-1" type="checkbox" hidden />
-                <label for="sub-sub-group-1"><span class="fa fa-angle-right"></span> Third level</label>
-                <ul class="sub-sub-group-list">
-                  <li><a href="#">3rd level nav item</a></li>
-                  <li><a href="#">3rd level nav item</a></li>
-                  <li><a href="#">3rd level nav item</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-      <input id="group-2" type="checkbox" hidden />
-      <label for="group-2"><span class="fa fa-angle-right"></span> First level</label>
-      <ul class="group-list">
-        <li>
-        <li><a href="#">1st level item</a></li>
-        <li><a href="#">1st level item</a></li>
-        <input id="sub-group-2" type="checkbox" hidden />
-        <label for="sub-group-2"><span class="fa fa-angle-right"></span> Second level</label>
-        <ul class="sub-group-list">
-          <li><a href="#">2nd level nav item</a></li>
-          <li><a href="#">2nd level nav item</a></li>
-          <li>
-            <input id="sub-sub-group-2" type="checkbox" hidden />
-            <label for="sub-sub-group-2"><span class="fa fa-angle-right"></span> Third level</label>
-            <ul class="sub-sub-group-list">
-              <li><a href="#">3rd level nav item</a></li>
-            </ul>
-          </li>
-        </ul>
-        </li>
-      </ul>
-      </li>
-      <li>
-      <input id="group-3" type="checkbox" hidden />
-      <label for="group-3"><span class="fa fa-angle-right"></span> First level</label>
-      <ul class="group-list">
-        <li>
-        <li><a href="#">1st level item</a></li>
-        <li><a href="#">1st level item</a></li>
-        <input id="sub-group-3" type="checkbox" hidden />
-        <label for="sub-group-3"><span class="fa fa-angle-right"></span> Second level</label>
-        <ul class="sub-group-list">
-          <li><a href="#">2nd level nav item</a></li>
-          <li><a href="#">2nd level nav item</a></li>
-          <li><a href="#">2nd level nav item</a></li>
-          <li>
-            <input id="sub-sub-group-3" type="checkbox" hidden />
-            <label for="sub-sub-group-3"><span class="fa fa-angle-right"></span> Third level</label>
-            <ul class="sub-sub-group-list">
-              <li><a href="#">3rd level nav item</a></li>
-              <li><a href="#">3rd level nav item</a></li>
-              <li><a href="#">3rd level nav item</a></li>
-            </ul>
-          </li>
-        </ul>
-        </li>
-      </ul>
-      </li>
-      <li>
-      <input id="group-4" type="checkbox" hidden />
-      <label for="group-4"><span class="fa fa-angle-right"></span> First level</label>
-      <ul class="group-list">
-        <li>
-        <li><a href="#">1st level item</a></li>
-        <input id="sub-group-4" type="checkbox" hidden />
-        <label for="sub-group-4"><span class="fa fa-angle-right"></span> Second level</label>
-        <ul class="sub-group-list">
-          <li><a href="#">2nd level nav item</a></li>
-          <li><a href="#">2nd level nav item</a></li>
-        </ul>
-        </li>
-      </ul>
-      </li>
-    </ul>
-  </nav>
-</header>
+<ul id="accordion" class="accordion">
+		<li>
+			<div class="link"><i class="fa fa-paint-brush"></i>Diseño web<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Photoshop</a></li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">Maquetacion web</a></li>
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-code"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Javascript</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">Frameworks javascript</a></li>
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-mobile"></i>Diseño responsive<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Tablets</a></li>
+				<li><a href="#">Dispositivos mobiles</a></li>
+				<li><a href="#">Medios de escritorio</a></li>
+				<li><a href="#">Otros dispositivos</a></li>
+			</ul>
+		</li>
+		<li><div class="link"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Google</a></li>
+				<li><a href="#">Bing</a></li>
+				<li><a href="#">Yahoo</a></li>
+				<li><a href="#">Otros buscadores</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+<!-- Scripts -->
+	<script src="{{ asset('plugins/js/jquery.min.js')}}" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ asset('plugins/js/NavBarV.js')}}" type="text/javascript" charset="utf-8"></script>

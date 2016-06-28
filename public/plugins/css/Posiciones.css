@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: #2d2c41;
+	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+.divisor
+{
+     position: relative;
+     display: inline-block;
+     color: #FFF;
+     padding: 5px;
+     margin: 10px;
+     width: 70%;
+}
+
+.Login
+{
+	margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.Login h3 
+{
+	background-color: #FFF;
+	text-align: center;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
+	filter: alpha(opacity=50);  /* IE 5-7 */
+	-moz-opacity: 0.5;          /* Netscape */
+	-khtml-opacity: 0.5;        /* Safari 1.x */
+	opacity: 0.5;
+	
+}
+
+.Login div button
+{
+	background-color: #FFF;
+	text-align: center;
+	widows: 30%;
+}

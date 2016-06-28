@@ -1,1 +1,3 @@
-@extends('Plantilla.Interfaz')
+@extends('Plantilla.Sesion')
+
+

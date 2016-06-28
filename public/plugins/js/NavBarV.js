@@ -1,26 +1,29 @@
 /**
  * @author Eliud Araya Cortes
  */
-$(document).ready(main);
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
 
-var contador = 1;
+		// Variables privadas
+		var links = this.el.find('.link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
 
-function main(){
-	$('.menu_bar').click(function(){
-		// $('nav').toggle(); 
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
 
-		if(contador == 1){
-			$('nav').animate({
-				left: '0'
-			});
-			contador = 0;
-		} else {
-			contador = 1;
-			$('nav').animate({
-				left: '-100%'
-			});
-		}
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
 
-	});
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
 
-};
+	var accordion = new Accordion($('#accordion'), false);
+});
