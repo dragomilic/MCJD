@@ -1,39 +1,27 @@
 <ul id="accordion" class="accordion">
 		<li>
-			<div class="link"><i class="fa fa-paint-brush"></i>Diseño web<i class="fa fa-chevron-down"></i></div>
+			<div class="link"><i class="fa fa-code"></i>Area programación<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">Photoshop</a></li>
-				<li><a href="#">HTML</a></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">Maquetacion web</a></li>
+				<li><a href="#">Agregar programa</a></li>
+				<li><a href="#">Modificar programa</a></li>
+				<li><a href="#">Estado de los programas</a></li>
 			</ul>
 		</li>
 		<li>
-			<div class="link"><i class="fa fa-code"></i>Desarrollo front-end<i class="fa fa-chevron-down"></i></div>
+			<div class="link"><i class="fa fa-codepen"></i>Control<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">Javascript</a></li>
-				<li><a href="#">jQuery</a></li>
-				<li><a href="#">Frameworks javascript</a></li>
+				<li><a href="#">Registrar analista</a></li>
+				<li><a href="#">Procesos por analista</a></li>
 			</ul>
 		</li>
 		<li>
-			<div class="link"><i class="fa fa-mobile"></i>Diseño responsive<i class="fa fa-chevron-down"></i></div>
+			<div class="link"><i class="fa fa-archive"></i>Revision de requisitos<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">Tablets</a></li>
-				<li><a href="#">Dispositivos mobiles</a></li>
-				<li><a href="#">Medios de escritorio</a></li>
-				<li><a href="#">Otros dispositivos</a></li>
+				<li ><a href="#">Corrección/Aprobada</a></li>
+				<li><a href="#">Aprobadas</a></li>
+				<li><a href="#">Rechazadas</a></li>
 			</ul>
 		</li>
-		<li><div class="link"><i class="fa fa-globe"></i>Posicionamiento web<i class="fa fa-chevron-down"></i></div>
-			<ul class="submenu">
-				<li><a href="#">Google</a></li>
-				<li><a href="#">Bing</a></li>
-				<li><a href="#">Yahoo</a></li>
-				<li><a href="#">Otros buscadores</a></li>
-			</ul>
-		</li>
-	</ul>
 	
 <!-- Scripts -->
 	<script src="{{ asset('plugins/js/jquery.min.js')}}" type="text/javascript" charset="utf-8"></script>

@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Document</title>
+	<title>Login</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('plugins/css/Posiciones.css') }}"/>
 </head>
 <body>
-	<header>
-		
-	</header>
-	
+	<form action="{{route ('MCJD.home')}}" method="get" accept-charset="utf-8">
+	  
 	<section class="Login">
 	  <h3>Login</h3>
 	  <div class="input-group input-group-sm">
@@ -25,10 +24,12 @@
 		  </span>
 		  <input type="text" class="form-control" placeholder="Clave" aria-describedby="sizing-addon2">
 	  </div>
-	  <div class="btn-group" role="group" aria-label="...">
-		  <button type="button" class="btn btn-default">Ingresar</button>
+	  <div >
+	  	<p></p>
+		  <button type="submit">Ingresar</button>
 	  </div>
-	  
 	</section>
+	
+	</form>
 </body>
 </html>

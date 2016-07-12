@@ -6,7 +6,8 @@
 	box-sizing: border-box;
 }
 
-body {
+body 
+{
 	background: #2d2c41;
 	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
 }
@@ -23,26 +24,43 @@ body {
 
 .Login
 {
-	margin: auto;
+	/**/
+	position: fixed; /* or absolute */
+	top: 30%;
+	left: 35%;
+	/**/
     width: 30%;
     padding: 10px;
+    background: #424242;
+    border-radius: 15px;
+   
 }
 
 .Login h3 
 {
+	font-family: Roboto, sans-serif;
 	background-color: #FFF;
 	text-align: center;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
 	filter: alpha(opacity=50);  /* IE 5-7 */
 	-moz-opacity: 0.5;          /* Netscape */
 	-khtml-opacity: 0.5;        /* Safari 1.x */
-	opacity: 0.5;
-	
+	opacity: 0.5;	
+	border-radius: 25px;
 }
 
 .Login div button
 {
-	background-color: #FFF;
+	font-family: Roboto, sans-serif;
+	font-size: 150%;
+	background-color: #f5f5f5;
+	padding: 5px;
 	text-align: center;
-	widows: 30%;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.Login div button:hover
+{
+	background-color: #eeeeee;
 }

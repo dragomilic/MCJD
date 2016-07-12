@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('Inicio.Inicio');
 });
+
+Route::group(['prefix' => 'MCJD'],function(){
+	
+	Route::get('home',['as' => 'MCJD.home', function(){
+		return view('main.home');
+	}]);
+
+});
