@@ -5,17 +5,29 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
-		   <form class="navbar-form navbar-left" role="search">
+		   <form method="get" accept-charset="utf-8">
 		   	
-			    <input type="text" class="form-control" placeholder="Identificación">
-			    <input type="text" class="form-control" placeholder="Nombre">
+		   	  <div class="form-group">
+		    	<input type="text" class="form-control" placeholder="Identificacion">
+	    	  </div>
+			  
+			  <div class="form-group">
+			  	<input type="text" class="form-control" placeholder="Nombre">
+			  </div>
+			  
+			  <div class="form-group">
 			    <input type="text" class="form-control" placeholder="Primer apellido">
+			  </div>
+			  
+			  <div class="form-group">
 			    <input type="text" class="form-control" placeholder="Segundo apellido">
+			  </div>
 			  
 			  <button type="submit" class="btn btn-default">Guardar</button>
+			  
 			</form>
 		   
-		  </div>
+		 </div>
 		</div>
 	</div>
 @endsection

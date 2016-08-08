@@ -17,11 +17,13 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'MCJD'],function(){
 	
-	Route::resource('Analista','AnalistaController');
-	
 	Route::get('home',['as' => 'MCJD.home', function(){
 		return view('main.home');
 	}]);
-
+	
+	Route::resource('Analista','AnalistaController');
+	
+	Route::resource('Programa','ProgramaController');
+	
 });
 

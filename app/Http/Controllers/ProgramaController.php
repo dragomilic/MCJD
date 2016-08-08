@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class AnalistaController extends Controller
+class ProgramaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class AnalistaController extends Controller
     public function index()
     {
         //
-        return view('main.analista.NewAnalista');
+        return view('main.programacion.Agregar');
     }
-
+	
     /**
      * Show the form for creating a new resource.
      *
@@ -38,7 +38,7 @@ class AnalistaController extends Controller
     public function store(Request $request)
     {
         //
-        
+        dd('hola');
     }
 
     /**
@@ -50,7 +50,7 @@ class AnalistaController extends Controller
     public function show($id)
     {
         //
-        dd($id);
+        dd('gdfhgjhkj');
     }
 
     /**

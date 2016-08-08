@@ -6,8 +6,8 @@
 		  <div class="panel-body">
 		   
 		   <form class="navbar-form navbar-left" role="search">
-		   	
-		   </form>
+		   			
+			</form>
 		   
 		  </div>
 		</div>
