@@ -10,7 +10,7 @@
 		<li>
 			<div class="link"><i class="fa fa-codepen"></i>Control<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">Registrar analista</a></li>
+				<li><a href="{{ route('MCJD.Analista.index') }}">Registrar analista</a></li>
 				<li><a href="#">Procesos por analista</a></li>
 			</ul>
 		</li>
