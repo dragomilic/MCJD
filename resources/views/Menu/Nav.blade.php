@@ -8,6 +8,13 @@
 			</ul>
 		</li>
 		<li>
+			<div class="link"><i class="fa fa-code"></i>Contrataciones<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">Registrar contratacion</a></li>
+				<li><a href="#">Listado de contrataciones</a></li>
+			</ul>
+		</li>
+		<li>
 			<div class="link"><i class="fa fa-codepen"></i>Control<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
 				<li><a href="{{ route('MCJD.Analista.index') }}">Registrar analista</a></li>

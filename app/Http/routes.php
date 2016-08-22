@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('Inicio.Inicio');
+    /*return view('Inicio.Inicio');*/
+    return view('main.Contrataciones.Agregar');
 });
 
 Route::group(['prefix' => 'MCJD'],function(){
