@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\AnalistaModel;
 
 class AnalistaController extends Controller
 {
@@ -27,6 +28,7 @@ class AnalistaController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**
@@ -38,7 +40,14 @@ class AnalistaController extends Controller
     public function store(Request $request)
     {
         //
-        
+        $Analista = new AnalistaModel;
+		
+		$Analista->Identificacion = $request->Identificacion;
+		$Analista->Nombre = $request->Nombre;
+		$Analista->PrimerApellido = $request->PrimerApellido;
+		$Analista->SegundoApellido = $request->SegundoApellido;
+		
+        $Analista->save();
     }
 
     /**
@@ -50,7 +59,9 @@ class AnalistaController extends Controller
     public function show($id)
     {
         //
-        dd($id);
+        $Analista = new AnalistaModel;
+        $Analisa = AnalistaModel::where('Identificacion', $id);
+		DD($Analisa);
     }
 
     /**
