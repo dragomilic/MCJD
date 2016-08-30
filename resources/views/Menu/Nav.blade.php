@@ -2,22 +2,24 @@
 		<li>
 			<div class="link"><i class="fa fa-code"></i>Area programación<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="{{ route('MCJD.Programa.index') }}">Agregar programa</a></li>
-				<li><a href="{{ route('MCJD.Programa.index') }}">Modificar programa</a></li>
-				<li><a href="{{ route('MCJD.Programa.index') }}">Estado de los programas</a></li>
+				<li><a href="{{ route('MCJD.Programa.index') }}">Lista de programas</a></li>
+				<li><a href="AddPrograma">Agregar programa</a></li>
+				<li><a href="#">Modificar programa</a></li>
+				<li><a href="#">Estado de los programas</a></li>
 			</ul>
 		</li>
 		<li>
 			<div class="link"><i class="fa fa-code"></i>Contrataciones<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="main">Registrar contratacion</a></li>
+				<li><a href="#">Registrar contratacion</a></li>
 				<li><a href="#">Listado de contrataciones</a></li>
 			</ul>
 		</li>
 		<li>
 			<div class="link"><i class="fa fa-codepen"></i>Control<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">Registrar analista</a></li>
+				<li><a href="AddAnalista">Registrar analista</a></li>
+				<li><a href="{{ route('MCJD.Analista.index') }}">Lista de analistas</a></li>
 				<li><a href="#">Procesos por analista</a></li>
 			</ul>
 		</li>

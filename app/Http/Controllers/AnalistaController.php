@@ -17,7 +17,10 @@ class AnalistaController extends Controller
     public function index()
     {
         //
-        return view('main.analista.NewAnalista');
+        $Analista = new AnalistaModel;
+        $Analista = AnalistaModel::all();
+		
+        return view('main.analista.Lista')->with('analista', $Analista);
     }
 
     /**
@@ -48,6 +51,8 @@ class AnalistaController extends Controller
 		$Analista->SegundoApellido = $request->SegundoApellido;
 		
         $Analista->save();
+		
+		return redirect()->route('MCJD.Analista.index');
     }
 
     /**
@@ -97,5 +102,9 @@ class AnalistaController extends Controller
     public function destroy($id)
     {
         //
+        AnalistaModel::where('Identificacion', $id)->delete();
+		
+		return redirect()->route('MCJD.Analista.index');
+		
     }
 }

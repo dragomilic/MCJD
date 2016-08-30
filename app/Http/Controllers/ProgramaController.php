@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\ProgramaModel;
 
 class ProgramaController extends Controller
 {
@@ -16,7 +17,10 @@ class ProgramaController extends Controller
     public function index()
     {
         //
-        return view('main.programacion.Agregar');
+        $Programa = new ProgramaModel;
+        $Programa = ProgramaModel::all();
+		
+        return view('main.programacion.Lista')->with('programa', $Programa);
     }
 	
     /**
@@ -38,7 +42,20 @@ class ProgramaController extends Controller
     public function store(Request $request)
     {
         //
-        dd('hola');
+        $Programa = new ProgramaModel;
+		
+		$Programa->SubPartida = $request->Identificacion;
+		$Programa->Solicitud = $request->NumSolicitud;
+		$Programa->Obj_cont_soli = $request->ObjContractual;
+		$Programa->Monto = $request->Monto;
+		$Programa->Oficio_ini = $request->NumOficio;
+		$Programa->PC = $request->PC;
+		
+		//DD($Programa);
+		
+        $Programa->save();
+		
+		return redirect()->route('MCJD.Programa.index');
     }
 
     /**
