@@ -9,7 +9,7 @@
 			</ul>
 		</li>
 		<li>
-			<div class="link"><i class="fa fa-code"></i>Contrataciones<i class="fa fa-chevron-down"></i></div>
+			<div class="link"><i class="fa fa-adjust"></i>Contrataciones<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
 				<li><a href="#">Registrar contratacion</a></li>
 				<li><a href="#">Listado de contrataciones</a></li>

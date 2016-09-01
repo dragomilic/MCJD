@@ -67,6 +67,11 @@ Route::group(['prefix' => 'MCJD'], function(){
 		'uses' => 'ProgramaController@index',
 		'as'   => 'MCJD.Programa.index'
 	]);
+	/**/
+	Route::get('EliminarPrograma/{id}',[
+		'uses' => 'ProgramaController@destroy',
+		'as'   => 'MCJD.Programa.destroy'
+	]);
 	
 	
 	

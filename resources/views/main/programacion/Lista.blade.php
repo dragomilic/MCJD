@@ -13,7 +13,8 @@
 				  <td><strong>Objeto contractual</strong></td>
 				  <td><strong>Monto</strong></td>
 				  <td><strong>Oficio</strong></td>
-				  <td><strong>P&C</strong></td>
+				  <td><strong>PC</strong></td>
+				  <td><strong>Funciones</strong></td>
 				</tr>
 				
 				@foreach($programa as $Programa)
@@ -27,7 +28,7 @@
 					  <td>
 					  	<a href= "#" class="btn btn-primary" role="button">Procesos</a>
 					  	<a href= "#" class="btn btn-primary" role="button">Modificar</a>
-					  	<a href= "{{ route('MCJD.Analista.destroy', $Analista->Identificacion) }}" class="btn btn-primary" role="button">Eliminar</a>
+					  	<a href= "{{ route('MCJD.Programa.destroy', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Eliminar</a>
 					  </td>
 					</tr>
 				@endforeach

@@ -20,7 +20,7 @@ class ProgramaController extends Controller
         $Programa = new ProgramaModel;
         $Programa = ProgramaModel::all();
 		
-        return view('main.programacion.Lista')->with('programa', $Programa);
+        return view('main.programacion.Lista') -> with('programa', $Programa);
     }
 	
     /**
@@ -48,8 +48,9 @@ class ProgramaController extends Controller
 		$Programa->Solicitud = $request->NumSolicitud;
 		$Programa->Obj_cont_soli = $request->ObjContractual;
 		$Programa->Monto = $request->Monto;
-		$Programa->Oficio_ini = $request->NumOficio;
 		$Programa->PC = $request->PC;
+		$Programa->Oficio_ini = $request->NumOficio;
+		
 		
 		//DD($Programa);
 		
@@ -103,5 +104,8 @@ class ProgramaController extends Controller
     public function destroy($id)
     {
         //
+        ProgramaModel::where('SubPartida', $id)->delete();
+		
+		return redirect()->route('MCJD.Programa.index');
     }
 }
