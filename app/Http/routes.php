@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('Inicio.Inicio');
 });
 
+/**/
+Route::get('Login',[
+		'uses' => 'HomeController@Login',
+		'as'   => 'Home.Login'
+]);
+/**/
+
 Route::group(['prefix' => 'MCJD'], function(){
 	
 	Route::get('home',['as' => 'MCJD.home', function(){
@@ -74,6 +81,57 @@ Route::group(['prefix' => 'MCJD'], function(){
 	]);
 	
 	
+	Route::resource('Contratacion','ContratacionController');
+	/*
+	Route::get('AddContratacion', function () {
+		return view('main.Contrataciones.Agregar');
+	});
+	*/
+	Route::get('AddContratacion',[
+		'uses' => 'ContratacionController@Load',
+		'as'   => 'MCJD.Contratacion.Load'
+	]);
+	/**/
+	Route::get('ListaContratacion',[
+		'uses' => 'ContratacionController@index',
+		'as'   => 'MCJD.Contratacion.index'
+	]);
+	/**/
+	Route::get('NewContratacion',[
+		'uses' => 'ContratacionController@store',
+		'as'   => 'MCJD.Contratacion.store'
+	]);
+	
+	Route::resource('Estatus','EstatusController');
+	/**/
+	Route::get('AddEstatus', function () {
+		return view('main.Estados.Agregar');
+	});
+	/**/
+	Route::get('NewEstatus',[
+		'uses' => 'EstatusController@store',
+		'as'   => 'MCJD.Estatus.store'
+	]);
+	/**/
+	Route::get('ListaEstatus',[
+		'uses' => 'EstatusController@index',
+		'as'   => 'MCJD.Estatus.index'
+	]);
+	
+	Route::resource('Proveedor','ProveedorController');
+	/**/
+	Route::get('AddProveedor', function () {
+		return view('main.Proveedor.Agregar');
+	});
+	/**/
+	Route::get('NewProveedor',[
+		'uses' => 'ProveedorController@store',
+		'as'   => 'MCJD.Proveedor.store'
+	]);
 	
 });
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

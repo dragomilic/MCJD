@@ -14,11 +14,9 @@
 	    	  <div class="form-group">
 		   	  	<label for="LbReciboArea">Analista</label>
 		    	<select class="form-control">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
+		    		@foreach($analista as $Analista)
+		    			<option>{{$Analista->Nombre}}</option>
+		    		@endforeach
 				</select>
 	    	  </div>
 	    	  
@@ -35,11 +33,9 @@
 	    	  <div class="form-group">
 		   	  	<label for="LbEstadoActual">Estado actual</label>
 		    	<select class="form-control">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
+					@foreach($estatus as $Estatus)
+					  <option>{{$Estatus->Estado}}</option>
+					@endforeach
 				</select>
 	    	  </div>
 	    	  

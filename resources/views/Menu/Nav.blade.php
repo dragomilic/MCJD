@@ -11,8 +11,8 @@
 		<li>
 			<div class="link"><i class="fa fa-adjust"></i>Contrataciones<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">Registrar contratacion</a></li>
-				<li><a href="#">Listado de contrataciones</a></li>
+				<li><a href="{{ route('MCJD.Contratacion.Load') }}">Registrar contratacion</a></li>
+				<li><a href="{{ route('MCJD.Contratacion.index') }}">Listado de contrataciones</a></li>
 			</ul>
 		</li>
 		<li>
@@ -29,6 +29,13 @@
 				<li><a href="#">Corrección/Aprobada</a></li>
 				<li><a href="#">Aprobadas</a></li>
 				<li><a href="#">Rechazadas</a></li>
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-bar-chart"></i>Administación<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="{{ route('MCJD.Estatus.index') }}">Estados</a></li>
+				<li><a href="{{ route('MCJD.Proveedor.index') }}">Proveedor</a></li>
 			</ul>
 		</li>
 	
