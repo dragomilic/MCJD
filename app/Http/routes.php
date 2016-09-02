@@ -48,6 +48,16 @@ Route::group(['prefix' => 'MCJD'], function(){
 		'as'   => 'MCJD.Analista.show'
 	]);
 	/**/
+	Route::get('Analista/{id}/edit',[
+		'uses' => 'AnalistaController@edit',
+		'as'   => 'MCJD.Analista.edit'
+	]);
+	/**/
+	Route::get('ActualizarAnalista',[
+		'uses' => 'AnalistaController@update',
+		'as'   => 'MCJD.Analista.update'
+	]);
+	/**/
 	Route::get('ListaAnalista',[
 		'uses' => 'AnalistaController@index',
 		'as'   => 'MCJD.Analista.index'

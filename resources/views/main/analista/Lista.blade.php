@@ -23,7 +23,7 @@
 					  <td>{{$Analista->SegundoApellido}}</td>
 					  <td>
 					  	<a href= "#" class="btn btn-primary" role="button">Procesos</a>
-					  	<a href= "#" class="btn btn-primary" role="button">Modificar</a>
+					  	<a href= "{{ route('MCJD.Analista.edit', $Analista->Identificacion) }}" class="btn btn-primary" role="button">Modificar</a>
 					  	<a href= "{{ route('MCJD.Analista.destroy', $Analista->Identificacion) }}" class="btn btn-primary" role="button">Eliminar</a>
 					  </td>
 					</tr>

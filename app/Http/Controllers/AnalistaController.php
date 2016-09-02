@@ -78,6 +78,10 @@ class AnalistaController extends Controller
     public function edit($id)
     {
         //
+        $Analista = new AnalistaModel;
+        $Analista = AnalistaModel::where('Identificacion',$id)->get();
+		
+		return view('main.analista.Modificar')->with('analista', $Analista);
         
     }
 
@@ -88,9 +92,13 @@ class AnalistaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+        $Analista = new AnalistaModel;
+        $Analista = AnalistaModel::findOrFail($id);
+		
+        return redirect()->route('MCJD.Analista.index');
     }
 
     /**
