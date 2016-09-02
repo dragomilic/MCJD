@@ -32,7 +32,7 @@
 		    	<input name="Fax" type="text" class="form-control" placeholder="Fax">
 	    	  </div>
 	    	  
-	    	  <button type="submit" class="btn btn-default">Guardar</button>
+	    	  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 	    	  
 			</form>
 		   

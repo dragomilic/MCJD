@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="{{ asset('plugins/css/NavBarV.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('plugins/css/Posiciones.css') }}"/>
+	<!-- -->
+	
 </head>
 	<!-- Encabezado -->
 	<header>

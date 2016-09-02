@@ -27,7 +27,7 @@
 			    <input name="SegundoApellido" type="text" class="form-control" placeholder="Segundo apellido">
 			  </div>
 			  
-			  <button type="submit" class="btn btn-default">Guardar</button>
+			  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  
 			</form>
 		   

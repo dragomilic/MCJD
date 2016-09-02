@@ -6,7 +6,7 @@
 		  <div class="panel-body">
 		   
 		   <form method="get" accept-charset="utf-8">
-		   		<a class="btn btn-default" href="AddEstatus" role="button">Agregar</a>
+		   		<a class="btn btn-primary btn-lg btn-block" href="AddEstatus" role="button">Agregar</a>
 		   		<hr/>
 		   			<!---->
 		   		<table class="table table-striped">

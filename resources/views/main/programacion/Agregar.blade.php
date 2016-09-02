@@ -41,7 +41,7 @@
 			    <input name="PC" type="text" class="form-control" placeholder="P&C">
 			  </div>
 			  
-			  <button type="submit" class="btn btn-default">Guardar</button>
+			  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  
 			</form>
 		   

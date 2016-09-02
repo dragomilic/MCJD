@@ -6,20 +6,13 @@
 		  <div class="panel-body">
 		   
 		   <form>
+		   	
+		   	  <!-- -->
 		   	  <div class="form-group">
 		   	  	<label for="LbReciboArea">Recibo de area</label>
 		    	<input type="text" class="form-control" placeholder="Recibo de area">
 	    	  </div>
-	    	  
-	    	  <div class="form-group">
-		   	  	<label for="LbReciboArea">Analista</label>
-		    	<select class="form-control">
-		    		@foreach($analista as $Analista)
-		    			<option>{{$Analista->Nombre}}</option>
-		    		@endforeach
-				</select>
-	    	  </div>
-	    	  
+
 	    	  <div class="form-group">
 		   	  	<label for="LbNumeroTramite">Numero de tramite</label>
 		    	<input type="text" class="form-control" placeholder="Numero de tramite">
@@ -27,91 +20,98 @@
 	    	  
 	    	  <div class="form-group">
 		   	  	<label for="LbApertura">Apertura</label>
-		    	<input type="datetime" class="form-control">
+		    	<input type="datetime" class="form-control" placeholder="dd/mm/yyyy">
 	    	  </div>
-	    	  
-	    	  <div class="form-group">
-		   	  	<label for="LbEstadoActual">Estado actual</label>
-		    	<select class="form-control">
-					@foreach($estatus as $Estatus)
-					  <option>{{$Estatus->Estado}}</option>
-					@endforeach
-				</select>
-	    	  </div>
-	    	  
-	    	  <div class="form-group">
-		   	  	<label for="LbProveedor">Proveedor</label>
-		    	<select class="form-control">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
-				</select>
-	    	  </div>
-			
-			
-		 <div class="form-group">
-		 	<label for="LbPedido">Pedido</label>
-			  <form class="form-inline">
-			  	
-			  	<div class="form-group">
-					    <label for="LbNumero">Numero</label>
-					    <input type="text" class="form-control" id="Pedido_Numero" placeholder="#">
-					  </div>
-					  
-					  <div class="form-group">
-					    <label for="LbFecha">Fecha</label>
-					    <input type="date" class="form-control" id="Pedido_Fecha" placeholder="dd/mm/yy">
-					  </div>
-					  
-					  <!--
+	    	  <!-- -->
+	    	  	
+	    	  <!-- -->
+	    	  <div class="form-inline">
+	    	  	  <!-- -->
+		    	  <div class="form-group">
+		    	  	<div class="col-xl-12">
+			   	  	<label for="LbReciboArea">Analista</label>
+			   	  		<select class="form-control">
+				    		@foreach($analista as $Analista)
+				    			<option>{{$Analista->Nombre}}</option>
+				    		@endforeach
+						</select>
+			   	  	</div>
+		    	  </div>
+	    	  	  <!-- -->
 			      <div class="form-group">
-				    <label for="LbTotal">Total</label>
-					 <div class="input-group">
-					    <div class="input-group-addon">₡</div>
-					    <input type="text" class="form-control" id="Contrato_Monto">
-					    <div class="input-group-addon">.00</div>
-					 </div>
-				  </div>
-						  
+			   	  	<label for="LbEstadoActual">Estado actual</label>
+			    	<select class="form-control input-sm">
+			  			@foreach($estatus as $Estatus)
+							<option>{{$Estatus->Estado}}</option>
+						@endforeach
+					</select>
+			   	  </div>
+			      <!-- -->
 			      <div class="form-group">
-					<label for="LbDiferencia">Diferencia</label>
-					  <div class="input-group">
-					     <div class="input-group-addon">₡</div>
-					     <input type="text" class="form-control" id="Contrato_Diferencia">
-					     <div class="input-group-addon">.00</div>
-					  </div>
-				  </div>
-				  -->
-			   </form>
-		   </div>
+			   	  	<label for="LbProveedor">Proveedor</label>
+			    	<select class="form-control input-sm">
+			    		@foreach($estatus as $Estatus)
+							<option>{{$Estatus->Estado}}</option>
+						@endforeach
+					</select>
+			  	  </div>
+			   </div>
+		  	   <!-- -->
+		  	 
+			   <!-- -->
+			   <div class="form-inline">
+			 	  <label for="LbPedido">Pedido</label>
+			 	  <hr/>
+				      <form class="form-inline">
+						<div class="input-group">
+						    <label for="LbDiferencia">Monto</label>
+							<div class="input-group">
+								<div class="input-group-addon">₡</div>
+								<input type="text" class="form-control" id="Contrato_Monto">
+							</div>
+						</div>
+									  
+						<div class="input-group">
+							<label for="LbDiferencia">Diferencia</label>
+							<div class="input-group">
+								<a class="input-group-addon">₡</a>
+								<input type="text" class="form-control" id="Contrato_Diferencia">
+							</div>
+						</div>
+					  </form>
+			   </div>
+			   <!-- -->
 		   <br/>
-		   <div class="form-group">
-				  <label for="LbPedido">Pedido</label>
-		    	  <form class="form-inline">
-		    	  	
-		    	  	  <div class="form-group">
-					    <label for="LbNumero">Numero</label>
-					    <input type="text" class="form-control" id="Pedido_Numero" placeholder="#">
-					  </div>
-					  
-					  <div class="form-group">
-					    <label for="LbFecha">Fecha</label>
-					    <input type="date" class="form-control" id="Pedido_Fecha" placeholder="dd/mm/yy">
-					  </div>
-					  
-					  <div class="form-group">
-					  	<label for="LbMonto">Monto</label>
-					    <div class="input-group">
-					      <div class="input-group-addon">₡</div>
-					      <input type="text" class="form-control" id="Pedido_Monto">
-					      <div class="input-group-addon">.00</div>
-					    </div>
-					  </div>
-					  
-				  </form>
-		   </div>
+			   <!-- -->
+			   <div class="form-group">
+					  <label for="LbPedido">Pedido</label>
+					  <hr/>
+			    	  <form class="form-inline">
+			    	  	
+			    	  	  <div class="form-group">
+						    <label for="LbNumero">Numero</label>
+						    <input type="text" class="form-control" id="Pedido_Numero" placeholder="#">
+						  </div>
+						  
+						  <div class="form-group">
+						    <label for="LbFecha">Fecha</label>
+						    <input type="date" class="form-control" id="Pedido_Fecha" placeholder="dd/mm/yy">
+						  </div>
+						  
+						  <div class="input-group">
+						  	<label for="LbMonto">Monto</label>
+						  	<div class="input-group">
+							  	<a class="input-group-addon">₡</a>
+							    <input type="text" class="form-control" id="Pedido_Monto">
+						    </div>
+						  </div>
+						  
+						  <hr />
+						  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
+				  	  
+					  </form>
+			   </div>
+			   <!-- -->
 		   </form>
 		  </div>
 	   </div>
