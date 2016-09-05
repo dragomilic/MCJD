@@ -99,5 +99,8 @@ class ProveedorController extends Controller
     public function destroy($id)
     {
         //
+        ProveedorModel::where('Identificacion', $id)->delete();
+		
+		return redirect()->route('MCJD.Proveedor.index');
     }
 }

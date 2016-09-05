@@ -27,7 +27,8 @@
 					  <td>{{$Proveedor->Telefono}}</td>
 					  <td>{{$Proveedor->fax}}</td>
 					  <td>
-					  	<a type="button" class="btn btn-primary">Modificar</a>
+					  	<a href="{{ route('MCJD.Proveedor.edit',  $Proveedor->Identificacion) }}" type="button" class="btn btn-primary">Modificar</a>
+					  	<a href="{{ route('MCJD.Proveedor.destroy',  $Proveedor->Identificacion) }}" type="button" class="btn btn-primary">Eliminar</a>
 					  </td>
 					</tr>
 				@endforeach

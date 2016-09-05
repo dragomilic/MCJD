@@ -23,7 +23,8 @@
 					  <td>{{$Estados->Estado}}</td>
 					  <td>{{$Estados->Motivo}}</td>
 					  <td>
-					  	<a type="button" class="btn btn-primary">Modificar</a>
+					  	<a href="{{ route('MCJD.Estatus.edit',  $Estados->Codigo) }}" type="button" class="btn btn-primary">Modificar</a>
+					  	<a href="{{ route('MCJD.Estatus.destroy',  $Estados->Codigo) }}" type="button" class="btn btn-primary">Eliminar</a>
 					  </td>
 					</tr>
 				@endforeach

@@ -22,7 +22,7 @@
 		    	<input name="Motivo" type="text" class="form-control" placeholder="Motivo">
 	    	  </div>
 			  
-			  <button type="submit" class="btn btn-default">Guardar</button>
+			  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  
 			</form>
 		   

@@ -5,7 +5,10 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
-		   <form class="navbar-form navbar-left" role="search">
+		   <form method="get" accept-charset="utf-8">
+		   	  <a class="btn btn-primary btn-lg btn-block" href="AddPrograma" role="button">Agregar</a>
+		   	  <hr/>
+		      <!---->
 		   	  <table class="table table-striped">
 			    <tr>
 				  <td><strong>Identificación</strong></td>

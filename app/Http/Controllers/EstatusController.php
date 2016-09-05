@@ -96,5 +96,8 @@ class EstatusController extends Controller
     public function destroy($id)
     {
         //
+        EstatusModel::where('Codigo', $id)->delete();
+		
+		return redirect()->route('MCJD.Estatus.index');
     }
 }

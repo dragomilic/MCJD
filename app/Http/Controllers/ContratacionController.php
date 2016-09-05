@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\AnalistaModel;
 use App\EstatusModel;
 use App\ProveedorModel;
+use App\ContratacionModel;
 
 class ContratacionController extends Controller
 {
@@ -20,8 +21,11 @@ class ContratacionController extends Controller
     public function index()
     {
         //
+        $Contratacion = new ContratacionModel;
+        $Contratacion = ContratacionModel::all();
         
-        return view('main.Contrataciones.Lista');
+        return view('main.Contrataciones.Lista')
+								->with('contrato', $Contratacion);
     }
 	
 	public function Load()
@@ -62,8 +66,31 @@ class ContratacionController extends Controller
      */
     public function store(Request $request)
     {
+    	DD($request);
         //
+        /*
+        $Analista = new AnalistaModel;
+        $Analista = AnalistaModel::where('Nombre', '=', $request->Analista)->first();
+		/**/
+		/*
+		$Proveedor = new ProveedorModel;
+		$Proveedor = ProveedorModel::where('Nombre', $request->Cod_Proveedor)->first();
+        /**/
+        /*
+        $Contrato = new ContratacionModel;
+		
+        $Contrato->Codigo = $request->Identificacion;
+		$Contrato->Recibo = $request->Recibo;
+		$Contrato->Analista = $Analista->Identificacion;
+		$Contrato->Tramite = $request->Tramite;
+		$Contrato->Apertura = $request->Apertura;
+		$Contrato->Cod_Proveedor = $Proveedor->Identificacion;
         
+		dd($Contrato);
+		
+		$Contrato->save();
+		
+		return redirect()->route('MCJD.Contratacion.index');*/
     }
 
     /**
@@ -110,6 +137,9 @@ class ContratacionController extends Controller
     public function destroy($id)
     {
         //
+		ContratacionModel::where('Codigo', $id)->delete();
+        
+		return redirect()->route('MCJD.Contratacion.index');
 		
     }
 }
