@@ -80,7 +80,10 @@ class ProgramaController extends Controller
     public function edit($id)
     {
         //
-        
+        $Programa = new ProgramaModel;
+        $Programa = ProgramaModel::where('SubPartida',$id)->get();
+		
+		return view('main.programacion.Modificar')->with('programa', $Programa);
     }
 
     /**

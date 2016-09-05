@@ -89,7 +89,12 @@ Route::group(['prefix' => 'MCJD'], function(){
 		'uses' => 'ProgramaController@destroy',
 		'as'   => 'MCJD.Programa.destroy'
 	]);
-	
+	/**/
+	Route::get('Programa/{id}/edit',[
+		'uses' => 'ProgramaController@edit',
+		'as'   => 'MCJD.Programa.edit'
+	]);
+	/**/
 	
 	Route::resource('Contratacion','ContratacionController');
 	/*

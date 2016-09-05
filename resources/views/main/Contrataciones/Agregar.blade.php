@@ -25,39 +25,39 @@
 	    	  <!-- -->
 	    	  	
 	    	  <!-- -->
-	    	  <div class="form-inline">
-	    	  	  <!-- -->
-		    	  <div class="form-group">
-		    	  	<div class="col-xl-12">
-			   	  	<label for="LbReciboArea">Analista</label>
-			   	  		<select class="form-control">
-				    		@foreach($analista as $Analista)
-				    			<option>{{$Analista->Nombre}}</option>
-				    		@endforeach
-						</select>
-			   	  	</div>
-		    	  </div>
-	    	  	  <!-- -->
-			      <div class="form-group">
-			   	  	<label for="LbEstadoActual">Estado actual</label>
-			    	<select class="form-control input-sm">
+	    	  <table class="table">
+			    <tr>
+				  <td><strong>Analista</strong></td>
+				  <td><strong>Estado actual</strong></td>
+				  <td><strong>Proveedor</strong></td>
+				</tr>
+				
+				<tr>
+				  <td>
+					<select class="form-control">
+				    	@foreach($analista as $Analista)
+				    		<option>{{$Analista->Nombre}}</option>
+				    	@endforeach
+					</select>
+				  </td>
+				  <td>
+				  	<select class="form-control">
 			  			@foreach($estatus as $Estatus)
 							<option>{{$Estatus->Estado}}</option>
 						@endforeach
 					</select>
-			   	  </div>
-			      <!-- -->
-			      <div class="form-group">
-			   	  	<label for="LbProveedor">Proveedor</label>
-			    	<select class="form-control input-sm">
-			    		@foreach($estatus as $Estatus)
-							<option>{{$Estatus->Estado}}</option>
+				  </td>
+				  <td>
+				  	<select class="form-control">
+			    		@foreach($proveedor as $Proveedor)
+							<option>{{$Proveedor->Nombre}}</option>
 						@endforeach
 					</select>
-			  	  </div>
-			   </div>
-		  	   <!-- -->
-		  	 
+				  </td>
+				</tr>
+			  </table>
+			  <!-- -->
+			  
 			   <!-- -->
 			   <div class="form-inline">
 			 	  <label for="LbPedido">Pedido</label>

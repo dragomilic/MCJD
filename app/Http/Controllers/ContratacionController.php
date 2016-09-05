@@ -8,6 +8,7 @@ use App\Http\Requests;
 /**/
 use App\AnalistaModel;
 use App\EstatusModel;
+use App\ProveedorModel;
 
 class ContratacionController extends Controller
 {
@@ -32,9 +33,13 @@ class ContratacionController extends Controller
 		$Estatus = new EstatusModel;
         $Estatus = EstatusModel::all();
 		
+		$Proveedor = new ProveedorModel;
+		$Proveedor = ProveedorModel::all();
+		
         return view('main.Contrataciones.Agregar')
         			-> with('analista', $Analista)
-					-> with('estatus', $Estatus);
+					-> with('estatus', $Estatus)
+					-> with('proveedor', $Proveedor);
     }
 	
 
