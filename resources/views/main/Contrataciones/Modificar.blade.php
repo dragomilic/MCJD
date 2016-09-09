@@ -65,7 +65,7 @@
 			   
 			   <div class="form-group">
 			   	  
-			   	  	<label for="LbPedido">Pedido</label>
+			   	  	<label for="LbPedido">Adjudicado</label>
 			   	  	
 			   	  	<div class="form-inline">
 				  	
@@ -73,7 +73,7 @@
 						    <label for="LbDiferencia">Monto</label>
 							<div class="input-group">
 								<div class="input-group-addon">₡</div>
-								<input name="Pedido_Monto" type="text" class="form-control" id="Contrato_Monto">
+								<input name="Adjudicado_Monto" type="text" class="form-control" id="Contrato_Monto">
 							</div>
 						</div>
 									  
@@ -81,7 +81,7 @@
 							<label for="LbDiferencia">Diferencia</label>
 							<div class="input-group">
 								<a class="input-group-addon">₡</a>
-								<input name="Pedido_Diferencia" type="text" class="form-control" id="Contrato_Diferencia">
+								<input name="Adjudicado_Diferencia" type="text" class="form-control" id="Contrato_Diferencia">
 							</div>
 						</div>
 						
@@ -92,7 +92,7 @@
 			   <!-- -->
 			   <div class="form-group">
 			   		  
-					  <label for="LbPedido">Solicitud</label>
+					  <label for="LbPedido">Pedido</label>
 					  
 			    	  <div class="form-inline">
 			    	  	

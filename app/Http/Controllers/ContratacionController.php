@@ -10,6 +10,8 @@ use App\AnalistaModel;
 use App\EstatusModel;
 use App\ProveedorModel;
 use App\ContratacionModel;
+use App\PedidoModel;
+use App\AdjudicadoModel;
 
 class ContratacionController extends Controller
 {
@@ -66,8 +68,8 @@ class ContratacionController extends Controller
      */
     public function store(Request $request)
     {
-    	
         //
+        
         $Analista = new AnalistaModel;
         $Analista = AnalistaModel::where('Nombre', $request->Analista)->first();
 		
@@ -75,15 +77,26 @@ class ContratacionController extends Controller
 		$Proveedor = ProveedorModel::where('Nombre', $request->Cod_Proveedor)->first();
   
         $Contrato = new ContratacionModel;
-		
         $Contrato->Codigo = $request->Identificacion;
 		$Contrato->Recibo = $request->Recibo;
 		$Contrato->Analista = $Analista->Identificacion;
 		$Contrato->Tramite = $request->Cod_Estatus;
 		$Contrato->Apertura = $request->Apertura;
 		$Contrato->Cod_Proveedor = $Proveedor->Identificacion;
-        
-		$Contrato->save();
+        $Contrato->save();
+		
+		/**/
+		$Adjudicado = new AdjudicadoModel;
+		$Adjudicado->Codigo = $request->Identificacion;
+		$Adjudicado->Monto = $request->Adjudicado_Monto;
+		$Adjudicado->Diferencia = $request->Adjudicado_Diferencia;
+		$Adjudicado->save();
+		/**/
+		$Pedido = new PedidoModel;
+		$Pedido->Numero = $request->Pedido_Numero;
+		$Pedido->Total = $request->Pedido_Fecha;
+		$Pedido->Fecha = $request->Pedido_Monto;
+		$Pedido->save();
 		
 		return redirect()->route('MCJD.Contratacion.index');
     }
@@ -119,14 +132,6 @@ class ContratacionController extends Controller
 		
         $Contrato = new ContratacionModel;
         $Contrato = ContratacionModel::where('id',$id)->first();
-		
-		/*
-		$Analista = new AnalistaModel;
-        $Analista = AnalistaModel::where('Identificacion', $Contrato->Analista)->first();
-		
-		$Proveedor = new ProveedorModel;
-		$Proveedor = ProveedorModel::where('Identificacion', $Contrato->Cod_Proveedor)->first();
-		*/
 		
 		return view('main.Contrataciones.Modificar')
 											->with('Contrato', $Contrato)

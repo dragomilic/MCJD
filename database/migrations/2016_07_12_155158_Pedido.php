@@ -17,6 +17,7 @@ class Pedido extends Migration
         	$table->increments('id');
 			$table->bigInteger('Numero')->nullable();
 			$table->text('Total')->nullable();
+			$table->date('Fecha')->nullable();
 			$table->timestamps();
         });
     }
