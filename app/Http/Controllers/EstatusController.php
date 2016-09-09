@@ -73,6 +73,10 @@ class EstatusController extends Controller
     public function edit($id)
     {
         //
+        $Estatus = new EstatusModel;
+        $Estatus = EstatusModel::where('id',$id)->first();
+		
+		return view('main.Estados.Modificar')->with('Estatus', $Estatus);
     }
 
     /**
@@ -82,9 +86,19 @@ class EstatusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+        $record = new EstatusModel;
+        $record = EstatusModel::where('Codigo', $request->Codigo)->first();
+		
+		$analista = EstatusModel::find($record->id);
+		
+		$analista->fill($request->all());
+		
+		$analista->save();
+		
+        return redirect()->route('MCJD.Estatus.index');
     }
 
     /**

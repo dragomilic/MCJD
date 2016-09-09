@@ -1,5 +1,7 @@
 @extends('Plantilla.Interfaz')
 
+@section('title', 'Lista de proveedores')
+
 @section('pantalla')
 	<div class="divisor">
 		<div class="panel panel-default">

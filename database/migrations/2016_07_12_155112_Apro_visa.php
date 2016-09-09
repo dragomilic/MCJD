@@ -14,7 +14,7 @@ class AproVisa extends Migration
     {
         //
         Schema::create('Apro_Visa', function(Blueprint $table){
-        	$table->increments('Codigo');
+        	$table->increments('id');
 			$table->Integer('Proveedor');
 			$table->text('Ofi_Presu')->nullable();
 			$table->text('Area_contratacion')->nullable();

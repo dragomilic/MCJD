@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Inicio</title>
+	<title>@yield('title','Default')</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Fuentes de Google -->

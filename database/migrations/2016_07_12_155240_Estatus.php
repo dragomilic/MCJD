@@ -14,7 +14,7 @@ class Estatus extends Migration
     {
         //
         Schema::create('Estatus', function(Blueprint $table){
-        	$table->increments('index');
+        	$table->increments('id');
 			$table->integer('Codigo');
 			$table->text('Estado')->nullable();
 			$table->text('Motivo')->nullable();

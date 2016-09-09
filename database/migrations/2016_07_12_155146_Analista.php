@@ -14,7 +14,7 @@ class Analista extends Migration
     {
         //
         Schema::create('Analista', function(Blueprint $table){
-        	$table->increments('index');
+        	$table->increments('id');
 			$table->text('Identificacion');
 			$table->text('Nombre')->nullable();
 			$table->text('PrimerApellido')->nullable();

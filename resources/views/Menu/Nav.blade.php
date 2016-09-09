@@ -23,6 +23,13 @@
 			</ul>
 		</li>
 		<li>
+			<div class="link"><i class="fa fa-bar-chart"></i>Administación<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="{{ route('MCJD.Estatus.index') }}">Estados</a></li>
+				<li><a href="{{ route('MCJD.Proveedor.index') }}">Proveedor</a></li>
+			</ul>
+		</li>
+		<li>
 			<div class="link"><i class="fa fa-archive"></i>Revision de requisitos<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
 				<li><a href="#">Corrección/Aprobada</a></li>
@@ -30,13 +37,7 @@
 				<li><a href="#">Rechazadas</a></li>
 			</ul>
 		</li>
-		<li>
-			<div class="link"><i class="fa fa-bar-chart"></i>Administación<i class="fa fa-chevron-down"></i></div>
-			<ul class="submenu">
-				<li><a href="{{ route('MCJD.Estatus.index') }}">Estados</a></li>
-				<li><a href="{{ route('MCJD.Proveedor.index') }}">Proveedor</a></li>
-			</ul>
-		</li>
+		
 	
 <!-- Scripts -->
 	<script src="{{ asset('plugins/js/jquery.min.js')}}" type="text/javascript" charset="utf-8"></script>

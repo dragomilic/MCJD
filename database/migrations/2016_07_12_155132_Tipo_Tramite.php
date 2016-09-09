@@ -14,7 +14,7 @@ class TipoTramite extends Migration
     {
         //
         Schema::create('Tipo_Tramite', function(Blueprint $table){
-        	$table->increments('index');
+        	$table->increments('id');
 			$table->bigInteger('Tipo');
 			$table->timestamps();
         });

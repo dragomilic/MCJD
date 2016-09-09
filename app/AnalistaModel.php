@@ -8,5 +8,5 @@ class AnalistaModel extends Model
 {
     //
     protected $table = 'Analista';
-	protected $fillable = ['Identificacion','Nombre','PrimerApellido','SegundoApellido'];
+	protected $fillable = ['id','Identificacion','Nombre','PrimerApellido','SegundoApellido'];
 }

@@ -14,7 +14,7 @@ class Adjudicado extends Migration
     {
         //
         Schema::create('Adjudicado', function(Blueprint $table){
-        	$table->increments('index');
+        	$table->increments('id');
 			$table->integer('Codigo');
 			$table->double('Monto',15,3)->nullable();
 			$table->double('Diferencia',15,3)->nullable();

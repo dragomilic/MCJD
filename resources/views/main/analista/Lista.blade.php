@@ -1,5 +1,7 @@
 @extends('Plantilla.Interfaz')
 
+@section('title', 'Lista de analistas')
+
 @section('pantalla')
 	<div class="divisor">
 		<div class="panel panel-default">
@@ -23,8 +25,8 @@
 					  <td>{{$Analista->SegundoApellido}}</td>
 					  <td>
 					  	<a href= "#" class="btn btn-primary" role="button">Procesos</a>
-					  	<a href= "{{ route('MCJD.Analista.edit', $Analista->Identificacion) }}" class="btn btn-primary" role="button">Modificar</a>
-					  	<a href= "{{ route('MCJD.Analista.destroy', $Analista->Identificacion) }}" class="btn btn-primary" role="button">Eliminar</a>
+					  	<a href= "{{ route('MCJD.Analista.edit', $Analista->id) }}" class="btn btn-primary" role="button">Modificar</a>
+					  	<a href= "{{ route('MCJD.Analista.destroy', $Analista->id) }}" class="btn btn-primary" role="button">Eliminar</a>
 					  </td>
 					</tr>
 				@endforeach

@@ -23,7 +23,7 @@ class ContratacionController extends Controller
         //
         $Contratacion = new ContratacionModel;
         $Contratacion = ContratacionModel::all();
-        
+		
         return view('main.Contrataciones.Lista')
 								->with('contrato', $Contratacion);
     }
@@ -66,31 +66,26 @@ class ContratacionController extends Controller
      */
     public function store(Request $request)
     {
-    	DD($request);
+    	
         //
-        /*
         $Analista = new AnalistaModel;
-        $Analista = AnalistaModel::where('Nombre', '=', $request->Analista)->first();
-		/**/
-		/*
+        $Analista = AnalistaModel::where('Nombre', $request->Analista)->first();
+		
 		$Proveedor = new ProveedorModel;
 		$Proveedor = ProveedorModel::where('Nombre', $request->Cod_Proveedor)->first();
-        /**/
-        /*
+  
         $Contrato = new ContratacionModel;
 		
         $Contrato->Codigo = $request->Identificacion;
 		$Contrato->Recibo = $request->Recibo;
 		$Contrato->Analista = $Analista->Identificacion;
-		$Contrato->Tramite = $request->Tramite;
+		$Contrato->Tramite = $request->Cod_Estatus;
 		$Contrato->Apertura = $request->Apertura;
 		$Contrato->Cod_Proveedor = $Proveedor->Identificacion;
         
-		dd($Contrato);
-		
 		$Contrato->save();
 		
-		return redirect()->route('MCJD.Contratacion.index');*/
+		return redirect()->route('MCJD.Contratacion.index');
     }
 
     /**
@@ -113,7 +108,31 @@ class ContratacionController extends Controller
     public function edit($id)
     {
         //
+        $Analista = new AnalistaModel;
+        $Analista = AnalistaModel::all();
         
+		$Estatus = new EstatusModel;
+        $Estatus = EstatusModel::all();
+		
+		$Proveedor = new ProveedorModel;
+		$Proveedor = ProveedorModel::all();
+		
+        $Contrato = new ContratacionModel;
+        $Contrato = ContratacionModel::where('id',$id)->first();
+		
+		/*
+		$Analista = new AnalistaModel;
+        $Analista = AnalistaModel::where('Identificacion', $Contrato->Analista)->first();
+		
+		$Proveedor = new ProveedorModel;
+		$Proveedor = ProveedorModel::where('Identificacion', $Contrato->Cod_Proveedor)->first();
+		*/
+		
+		return view('main.Contrataciones.Modificar')
+											->with('Contrato', $Contrato)
+											-> with('analista', $Analista)
+											-> with('estatus', $Estatus)
+											-> with('proveedor', $Proveedor);
     }
 
     /**
@@ -126,6 +145,16 @@ class ContratacionController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $record = new ContratacionModel;
+        $record = ContratacionModel::where('Codigo', $request->Identificacion)->first();
+		
+		$analista = ContratacionModel::find($record->id);
+		
+		$analista->fill($request->all());
+		
+		$analista->save();
+		
+        return redirect()->route('MCJD.Contrataciones.index');
     }
 
     /**
@@ -137,9 +166,10 @@ class ContratacionController extends Controller
     public function destroy($id)
     {
         //
-		ContratacionModel::where('Codigo', $id)->delete();
+        
+		ContratacionModel::where('index', $id)->delete();
         
 		return redirect()->route('MCJD.Contratacion.index');
-		
+
     }
 }

@@ -14,7 +14,7 @@ class Legal extends Migration
     {
         //
         Schema::create('Legal', function(Blueprint $table){
-        	$table->increments('index');
+        	$table->increments('id');
 			$table->integer('Codigo');
 			$table->text('Envio')->nullable();
 			$table->text('Recibido')->nullable();

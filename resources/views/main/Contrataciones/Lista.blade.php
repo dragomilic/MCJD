@@ -1,5 +1,7 @@
 @extends('Plantilla.Interfaz')
 
+@section('title', 'Lista de contrataciones')
+
 @section('pantalla')
 	<div class="divisor">
 		<div class="panel panel-default">
@@ -29,8 +31,8 @@
 					  <td>{{$Contrato->Apertura}}</td>
 					  <td>{{$Contrato->Cod_Proveedor}}</td>
 					  <td>
-					  	<a href="{{ route('MCJD.Contratacion.edit',  $Estados->Codigo) }}" type="button" class="btn btn-primary">Modificar</a>
-					  	<a href="{{ route('MCJD.Contratacion.destroy',  $Estados->Codigo) }}" type="button" class="btn btn-primary">Eliminar</a>
+					  	<a href="{{ route('MCJD.Contratacion.edit',  $Contrato->id) }}" type="button" class="btn btn-primary">Modificar</a>
+					  	<a href="{{ route('MCJD.Contratacion.destroy',  $Contrato->id) }}" type="button" class="btn btn-primary">Eliminar</a>
 					  </td>
 					</tr>
 				@endforeach

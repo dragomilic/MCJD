@@ -1,5 +1,6 @@
 @extends('Plantilla.Interfaz')
 
+@section('title', 'Pantalla principal')
 
 @section('pantalla')
 	<div class="divisor">

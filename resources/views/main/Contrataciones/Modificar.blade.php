@@ -7,22 +7,22 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
-		   <form action="{{ route('MCJD.Contratacion.store') }}" method="get" accept-charset="utf-8">
+		   <form action="{{ route('MCJD.Contratacion.update') }}" method="put" accept-charset="utf-8">
 		   	
 		   	  <!-- -->
 		   	  <div class="form-group">
 		   	  	<label for="LbReciboArea">Recibo de area</label>
-		    	<input name="Identificacion" type="text" class="form-control" placeholder="Recibo de area">
+		    	<input name="Identificacion" type="text" class="form-control" value={{$Contrato->Codigo}}>
 	    	  </div>
 
 	    	  <div class="form-group">
 		   	  	<label for="LbNumeroTramite">Numero de tramite</label>
-		    	<input name="Recibo" type="text" class="form-control" placeholder="Numero de tramite">
+		    	<input name="Recibo" type="text" class="form-control" value={{$Contrato->Recibo}}>
 	    	  </div>
 	    	  
 	    	  <div class="form-group">
 		   	  	<label for="LbApertura">Apertura</label>
-		    	<input name="Apertura" type="datetime" class="form-control" placeholder="dd/mm/yyyy">
+		    	<input name="Apertura" type="datetime" class="form-control" value={{$Contrato->Apertura}}>
 	    	  </div>
 	    	  <!-- -->
 	    	  

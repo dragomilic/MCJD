@@ -14,7 +14,7 @@ class Pedido extends Migration
     {
         //
         Schema::create('Pedido', function(Blueprint $table){
-        	$table->increments('Codigo');
+        	$table->increments('id');
 			$table->bigInteger('Numero')->nullable();
 			$table->text('Total')->nullable();
 			$table->timestamps();

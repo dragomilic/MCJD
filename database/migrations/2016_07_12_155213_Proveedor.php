@@ -14,7 +14,7 @@ class Proveedor extends Migration
     {
         //
         Schema::create('Proveedor', function(Blueprint $table){
-        	$table->increments('index');
+        	$table->increments('id');
 			$table->bigInteger('Identificacion');
 			$table->text('Nombre');
 			$table->text('Direccion')->nullable();

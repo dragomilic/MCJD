@@ -79,9 +79,9 @@ class AnalistaController extends Controller
     {
         //
         $Analista = new AnalistaModel;
-        $Analista = AnalistaModel::where('Identificacion',$id)->get();
+        $Analista = AnalistaModel::where('id', $id)->first();
 		
-		return view('main.analista.Modificar')->with('analista', $Analista);
+		return view('main.analista.Modificar')->with('Analista', $Analista);
         
     }
 
@@ -95,8 +95,14 @@ class AnalistaController extends Controller
     public function update(Request $request)
     {
         //
-        $Analista = new AnalistaModel;
-        $Analista = AnalistaModel::findOrFail($id);
+        $record = new AnalistaModel;
+        $record = AnalistaModel::where('Identificacion', $request->Identificacion)->first();
+		
+		$analista = AnalistaModel::find($record->id);
+		
+		$analista->fill($request->all());
+		
+		$analista->save();
 		
         return redirect()->route('MCJD.Analista.index');
     }
@@ -110,7 +116,7 @@ class AnalistaController extends Controller
     public function destroy($id)
     {
         //
-        AnalistaModel::where('Identificacion', $id)->delete();
+        AnalistaModel::where('id', $id)->delete();
 		
 		return redirect()->route('MCJD.Analista.index');
 		

@@ -120,7 +120,7 @@ Route::group(['prefix' => 'MCJD'], function(){
 		'as'   => 'MCJD.Contratacion.store'
 	]);
 	/**/
-	Route::get('Contratacion/{id}',[
+	Route::get('EliminarContratacion/{id}',[
 		'uses' => 'ContratacionController@destroy',
 		'as'   => 'MCJD.Contratacion.destroy'
 	]);
@@ -128,6 +128,11 @@ Route::group(['prefix' => 'MCJD'], function(){
 	Route::get('Contratacion/{id}/edit',[
 		'uses' => 'ContratacionController@edit',
 		'as'   => 'MCJD.Contratacion.edit'
+	]);
+	/**/
+	Route::get('ActualizarContratacion',[
+		'uses' => 'ContratacionController@update',
+		'as'   => 'MCJD.Contratacion.update'
 	]);
 	
 	/*
@@ -157,6 +162,11 @@ Route::group(['prefix' => 'MCJD'], function(){
 	Route::get('Estatus/{id}/edit',[
 		'uses' => 'EstatusController@edit',
 		'as'   => 'MCJD.Estatus.edit'
+	]);
+	/**/
+	Route::get('ActualizarEstatus',[
+		'uses' => 'EstatusController@update',
+		'as'   => 'MCJD.Estatus.update'
 	]);
 	
 	/*

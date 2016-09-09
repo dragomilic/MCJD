@@ -14,7 +14,8 @@ class RevReq extends Migration
     {
         //
         Schema::create('Rev_req', function(Blueprint $table){
-        	$table->increments('Codigo');
+        	$table->increments('id');
+			$table->Integer('Codigo');
 			$table->Integer('Analista');
 			$table->text('Traslado')->nullable();
 			$table->text('Estado')->nullable();
