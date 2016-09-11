@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\ProgramaModel;
 
-class ProgramaController extends Controller
+class EstadoProgramaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +17,17 @@ class ProgramaController extends Controller
     public function index()
     {
         //
+        /**/
+        $Mensaje = null;
+		/**/
         $Programa = new ProgramaModel;
         $Programa = ProgramaModel::all();
 		
-        return view('main.programacion.Lista') -> with('programa', $Programa);
+        return view('main.EstadoPrograma.Lista') 
+        					-> with('programa', $Programa)
+							-> with('mensaje', $Mensaje);
     }
-	
+
     /**
      * Show the form for creating a new resource.
      *
@@ -42,34 +47,47 @@ class ProgramaController extends Controller
     public function store(Request $request)
     {
         //
-        $Programa = new ProgramaModel;
-		
-		$Programa->Codigo = $request->Codigo;
-		$Programa->SubPartida = $request->SubPartida;
-		$Programa->Solicitud = $request->NumSolicitud;
-		$Programa->Obj_cont_soli = $request->ObjContractual;
-		$Programa->Monto = $request->Monto;
-		$Programa->PC = $request->PC;
-		$Programa->Oficio_ini = $request->NumOficio;
-		
-		
-		//DD($Programa);
-		
-        $Programa->save();
-		
-		return redirect()->route('MCJD.Programa.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  varchar  Columna, varchar  Busqueda
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         //
-        dd('gdfhgjhkj');
+        $Programa = new ProgramaModel;
+        
+        if ($request->Columna == 'Codigo') 
+        {
+        	$Programa = ProgramaModel::where('Codigo', $request->Busqueda)->get();
+        }
+		elseif ($request->Columna == 'SubPartida') 
+		{
+			$Programa = ProgramaModel::where('SubPartida', $request->Busqueda)->get();
+		}
+		elseif ($request->Columna == 'Solicitud') 
+		{
+			$Programa = ProgramaModel::where('Solicitud', $request->Busqueda)->get();
+		}
+		else 
+		{
+            //$Mensaje = 'Seleccion no valida';
+        }
+		
+		if (count($Programa) == 0) 
+		{
+			$Mensaje = 'Busqueda sin resultados';
+		}
+		else {
+			$Mensaje = null;
+		}
+		
+        return view('main.EstadoPrograma.Lista') 
+        								-> with('programa', $Programa)
+										-> with('mensaje', $Mensaje);
     }
 
     /**
@@ -81,10 +99,6 @@ class ProgramaController extends Controller
     public function edit($id)
     {
         //
-        $Programa = new ProgramaModel;
-        $Programa = ProgramaModel::where('SubPartida',$id)->get();
-		
-		return view('main.programacion.Modificar')->with('programa', $Programa);
     }
 
     /**
@@ -108,8 +122,5 @@ class ProgramaController extends Controller
     public function destroy($id)
     {
         //
-        ProgramaModel::where('SubPartida', $id)->delete();
-		
-		return redirect()->route('MCJD.Programa.index');
     }
 }

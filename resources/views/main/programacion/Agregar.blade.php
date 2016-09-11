@@ -10,8 +10,13 @@
 		   <form action="{{ route('MCJD.Programa.store') }}" method="get" accept-charset="utf-8">
 		   	
 		   	  <div class="form-group">
-		   	  	<label for="LbIdentificacion">Identificacion</label>
-		   	  	<input name="Identificacion" type="text" class="form-control" placeholder="Programa">
+		   	  	<label for="LbIdentificacion">Codigo</label>
+		   	  	<input name="Codigo" type="text" class="form-control" placeholder="Programa">
+	    	  </div>
+	    	  
+		   	  <div class="form-group">
+		   	  	<label for="LbIdentificacion">SubPartida</label>
+		   	  	<input name="SubPartida" type="text" class="form-control" placeholder="Programa">
 	    	  </div>
 			  
 			  <div class="form-group">
@@ -24,25 +29,30 @@
 			    <textarea name="ObjContractual" class="form-control" placeholder="Objeto contractual solicitado" rows="3"></textarea>
 			  </div>
 			  
-			  <div class="form-group">
-			  	<label for="LbMonto">Monto</label>
-			    <div class="input-group">
-			      <div class="input-group-addon">₡</div>
-			      <input name="Monto" type="text" class="form-control" id="exampleInputAmount" placeholder="Monto">
-			      <div class="input-group-addon">.00</div>
-			    </div>
-			  </div>
-			  
-			  <div class="form-group">
-			  	<label for="LbNumeroOficioInicio">Numero de oficio inicio</label>
-			    <input name="NumOficio" type="text" class="form-control" placeholder="Numero de oficio inicio">
-			  </div>
-			  
-			  <div class="form-group">
-			    <label for="LbP&C">P&C</label>
-			    <input name="PC" type="text" class="form-control" placeholder="P&C">
-			  </div>
-			  
+			  <!---->
+		   	  <table class="table table-striped">
+			    <tr>
+				  <td><strong>Monto</strong></td>
+				  <td><strong>Numero de oficio inicio</strong></td>
+				  <td><strong>Fecha de recibo en P&C</strong></td>
+				</tr>
+				
+				<tr>
+				  <td>
+				  	<div class="input-group">
+				      <div class="input-group-addon">₡</div>
+				      <input name="Monto" type="text" class="form-control" id="exampleInputAmount" placeholder="Monto">
+				    </div>
+				  </td>
+				  <td>
+				  	<input name="NumOficio" type="text" class="form-control" placeholder="Numero de oficio inicio">
+				  </td>
+				  <td>
+				  	<input name="PC" type="text" class="form-control" placeholder="P&C">
+				  </td>
+				</tr>
+			   </table>
+			  <hr/>
 			  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  
 			</form>

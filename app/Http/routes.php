@@ -99,6 +99,17 @@ Route::group(['prefix' => 'MCJD'], function(){
 		'as'   => 'MCJD.Programa.edit'
 	]);
 	/**/
+	Route::resource('EstadoPrograma','EstadoProgramaController');
+	/**/
+	Route::get('ListaEstadoPrograma',[
+		'uses' => 'EstadoProgramaController@index',
+		'as'   => 'MCJD.EstadoPrograma.index'
+	]);
+	/**/
+	Route::get('BuscarEstadoPrograma',[
+		'uses' => 'EstadoProgramaController@show',
+		'as'   => 'MCJD.EstadoPrograma.show'
+	]);
 	
 	/*
 	 * 
@@ -197,6 +208,7 @@ Route::group(['prefix' => 'MCJD'], function(){
 		'uses' => 'ProveedorController@edit',
 		'as'   => 'MCJD.Proveedor.edit'
 	]);
+	
 	
 });
 

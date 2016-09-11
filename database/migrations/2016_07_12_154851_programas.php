@@ -15,6 +15,7 @@ class Programas extends Migration
     	//
         Schema::create('programas', function(Blueprint $table){
         	$table->increments('id');
+			$table->bigInteger('Codigo')->nullable();
 			$table->bigInteger('SubPartida')->nullable();
 			$table->text('Solicitud')->nullable();
 			$table->text('Obj_cont_soli')->nullable();

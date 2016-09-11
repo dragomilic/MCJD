@@ -30,5 +30,6 @@ class Legal extends Migration
     public function down()
     {
         //
+        Schema::drop('Legal');
     }
 }

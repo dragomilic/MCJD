@@ -4,7 +4,7 @@
 			<ul class="submenu">
 				<li><a href="{{ route('MCJD.Programa.index') }}">Lista de programas</a></li>
 				<li><a href="AddPrograma">Agregar programa</a></li>
-				<li><a href="#">Estado de los programas</a></li>
+				<li><a href="{{ route('MCJD.EstadoPrograma.index') }}">Estado de los programas</a></li>
 			</ul>
 		</li>
 		<li>
