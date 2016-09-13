@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class AproVisaModel extends Model
 {
     //
+    protected $table = 'Apro_Visa';
+	protected $fillable = ['id','Proveedor','Ofi_Presu','Area_contratacion'];
 }

@@ -48,7 +48,7 @@
 				  	<input name="NumOficio" type="text" class="form-control" placeholder="Numero de oficio inicio">
 				  </td>
 				  <td>
-				  	<input name="PC" type="text" class="form-control" placeholder="P&C">
+				  	<input name="PC" id="datepicker" type="text" class="form-control" placeholder="">
 				  </td>
 				</tr>
 			   </table>

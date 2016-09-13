@@ -9,23 +9,28 @@
 		   
 		   <form action="{{ route('MCJD.Contratacion.store') }}" method="get" accept-charset="utf-8">
 		   	
-		   	  <!-- -->
-		   	  <div class="form-group">
-		   	  	<label for="LbReciboArea">Recibo de area</label>
-		    	<input name="Identificacion" type="text" class="form-control" placeholder="Recibo de area">
-	    	  </div>
-
-	    	  <div class="form-group">
-		   	  	<label for="LbNumeroTramite">Numero de tramite</label>
-		    	<input name="Recibo" type="text" class="form-control" placeholder="Numero de tramite">
-	    	  </div>
-	    	  
-	    	  <div class="form-group">
-		   	  	<label for="LbApertura">Apertura</label>
-		    	<input name="Apertura" type="datetime" class="form-control" placeholder="dd/mm/yyyy">
-	    	  </div>
-	    	  <!-- -->
-	    	  
+		   		<!-- -->
+	    	  <table class="table">
+			    <tr>
+				  <td><strong>Recibo de area</strong></td>
+				  <td><strong>Numero de tramite</strong></td>
+				  <td><strong>Apertura</strong></td>
+				</tr>
+				
+				<tr>
+				  <td>
+					<input name="Identificacion" type="text" class="form-control" placeholder="Recibo de area">
+				  </td>
+				  <td>
+				  	<input name="Recibo" type="text" class="form-control" placeholder="Numero de tramite">
+				  </td>
+				  <td>
+				  	<input name="Apertura" type="text" id="datepicker" class="form-control" placeholder="dd/mm/yyyy">
+				  </td>
+				</tr>
+			  </table>
+			  <!-- -->
+		   	  <br />
 	    	  <!-- -->
 	    	  <table class="table">
 			    <tr>
@@ -59,7 +64,7 @@
 				</tr>
 			  </table>
 			  <!-- -->
-	    	  
+			  <br />
 			  <!-- -->
 			   <hr/>
 			   
@@ -68,7 +73,7 @@
 			   	  	<label for="LbPedido">Adjudicado</label>
 			   	  	
 			   	  	<div class="form-inline">
-				  	
+				  	<br />
 						<div class="input-group">
 						    <label for="LbDiferencia">Monto</label>
 							<div class="input-group">
@@ -88,7 +93,7 @@
 				 	</div>
 			   </div>
 			   <!-- -->
-		   <br/>
+		       <br/>
 			   <!-- -->
 			   <div class="form-group">
 			   		  
@@ -124,4 +129,6 @@
 		  </div>
 	   </div>
 	</div>
+	
+	
 @endsection

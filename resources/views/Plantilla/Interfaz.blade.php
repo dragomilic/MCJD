@@ -12,7 +12,8 @@
 	<link rel="stylesheet" href="{{ asset('plugins/css/NavBarV.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('plugins/css/Posiciones.css') }}"/>
-	<!-- -->
+	<link rel="stylesheet" href="{{ asset('plugins/css/jquery-ui.css') }}"/>
+	
 	
 </head>
 	<!-- Encabezado -->
@@ -28,5 +29,16 @@
 		</div>
 		
 	@yield('pantalla')
+	
+	<!-- -->
+	<script src="{{ asset('plugins/js/jquery.js') }}"></script>
+	<script src="{{ asset('plugins/js/jquery-ui.js') }}"></script>
+	<script>
+
+	$( "#datepicker" ).datepicker({
+		inline: true
+	});
+	
+	</script>
 	
 </html>
