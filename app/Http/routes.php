@@ -209,6 +209,25 @@ Route::group(['prefix' => 'MCJD'], function(){
 		'as'   => 'MCJD.Proveedor.edit'
 	]);
 	
+	/*
+	 * 
+	 * */
+	Route::resource('RevReq','RevReqController');
+	/**/
+	Route::get('ListaRevReq',[
+		'uses' => 'RevReqController@index',
+		'as'   => 'MCJD.RevReq.index'
+	]);
+	
+	/*
+	 * 
+	 * */
+	Route::resource('AproVisa','AproVisaController');
+	/**/
+	Route::get('ListaAproVisa',[
+		'uses' => 'AproVisaController@index',
+		'as'   => 'MCJD.AproVisa.index'
+	]);
 	
 });
 

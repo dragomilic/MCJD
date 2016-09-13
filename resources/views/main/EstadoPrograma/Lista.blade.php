@@ -54,8 +54,8 @@
 					  <td>{{$Programa->Solicitud}}</td>
 					  <td>{{$Programa->Obj_cont_soli}}</td>
 					  <td>
-					  	<a href= "#" class="btn btn-primary" role="button">Revisión de requisitos</a>
-					  	<a href= "#" class="btn btn-primary" role="button">Aprobación y visado</a>
+					  	<a href= "{{ route('MCJD.RevReq.index') }}" class="btn btn-primary" role="button">Revisión de requisitos</a>
+					  	<a href= "{{ route('MCJD.AproVisa.index') }}" class="btn btn-primary" role="button">Aprobación y visado</a>
 					  </td>
 					</tr>
 				@endforeach
