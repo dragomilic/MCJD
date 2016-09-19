@@ -33,11 +33,9 @@
 	<!-- -->
 	<script src="{{ asset('plugins/js/jquery.js') }}"></script>
 	<script src="{{ asset('plugins/js/jquery-ui.js') }}"></script>
-	<script>
+	<script src="{{ asset('plugins/js/bootstrap.js') }}" data-modules="{{ asset('plugins/js/datepicker-es.js') }}">
 
-	$( "#datepicker" ).datepicker({
-		inline: true
-	});
+	$( "#datepicker" ).datepicker( $.datepicker.regional[ "es" ] );
 	
 	</script>
 	
