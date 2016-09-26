@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\RevReqModel;
 
 class RevReqController extends Controller
 {
@@ -38,6 +39,19 @@ class RevReqController extends Controller
     public function store(Request $request)
     {
         //
+        $RevReq = new RevReqModel;
+		
+		$RevReq->Codigo = $request->Codigo;
+		$RevReq->Analista = $request->Analista;
+		$RevReq->Traslado = $request->Traslado;
+		$RevReq->Estado = $request->Estado;
+		$RevReq->Tramite = $request->Tramite;
+		$RevReq->Observaciones = $request->Observaciones;
+		
+        $RevReq->save();
+		
+		return redirect()->route('MCJD.RevisionReq.index');
+        
     }
 
     /**
@@ -49,6 +63,11 @@ class RevReqController extends Controller
     public function show($id)
     {
         //
+        $rev_req = new RevReqModel;
+		$rev_req = RevReqModel::where('Codigo',$id)->first();
+		
+		return view('main.RevisionReq.Agregar') 
+								-> with('rev_req', $rev_req);
     }
 
     /**
