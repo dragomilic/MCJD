@@ -17,7 +17,7 @@ class AproVisaController extends Controller
     public function index()
     {
         //
-        return view('main.AprobacionVisado.Agregar');
+        return view('main.Modulo1.AprobacionVisado.Agregar');
     }
 
     /**

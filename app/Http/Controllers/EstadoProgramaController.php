@@ -23,7 +23,7 @@ class EstadoProgramaController extends Controller
         $Programa = new ProgramaModel;
         $Programa = ProgramaModel::all();
 		
-        return view('main.EstadoPrograma.Lista') 
+        return view('main.Modulo1.EstadoPrograma.Lista') 
         					-> with('programa', $Programa)
 							-> with('mensaje', $Mensaje);
     }
@@ -85,7 +85,7 @@ class EstadoProgramaController extends Controller
 			$Mensaje = null;
 		}
 		
-        return view('main.EstadoPrograma.Lista') 
+        return view('main.Modulo1.EstadoPrograma.Lista') 
         								-> with('programa', $Programa)
 										-> with('mensaje', $Mensaje);
     }

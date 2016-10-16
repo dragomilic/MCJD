@@ -20,7 +20,7 @@ class EstatusController extends Controller
         $Estados = new EstatusModel;
 		$Estados = EstatusModel::all();
 		
-		return view('main.Estados.lista') -> with('estados',$Estados);
+		return view('main.Modulo1.Estados.lista') -> with('estados',$Estados);
     }
 
     /**
@@ -76,7 +76,7 @@ class EstatusController extends Controller
         $Estatus = new EstatusModel;
         $Estatus = EstatusModel::where('id',$id)->first();
 		
-		return view('main.Estados.Modificar')->with('Estatus', $Estatus);
+		return view('main.Modulo1.Estados.Modificar')->with('Estatus', $Estatus);
     }
 
     /**

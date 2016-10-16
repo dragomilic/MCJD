@@ -17,7 +17,7 @@ class RevReqController extends Controller
     public function index()
     {
         //
-        return view('main.RevisionReq.Agregar');
+        return view('main.Modulo1.RevisionReq.Agregar');
     }
 
     /**
@@ -66,7 +66,7 @@ class RevReqController extends Controller
         $rev_req = new RevReqModel;
 		$rev_req = RevReqModel::where('Codigo',$id)->first();
 		
-		return view('main.RevisionReq.Agregar') 
+		return view('main.Modulo1.RevisionReq.Agregar') 
 								-> with('rev_req', $rev_req);
     }
 

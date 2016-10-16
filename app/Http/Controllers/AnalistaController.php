@@ -20,7 +20,7 @@ class AnalistaController extends Controller
         $Analista = new AnalistaModel;
         $Analista = AnalistaModel::all();
 		
-        return view('main.analista.Lista')->with('analista', $Analista);
+        return view('main.Opciones.analista.Lista')->with('analista', $Analista);
     }
 
     /**
@@ -81,7 +81,7 @@ class AnalistaController extends Controller
         $Analista = new AnalistaModel;
         $Analista = AnalistaModel::where('id', $id)->first();
 		
-		return view('main.analista.Modificar')->with('Analista', $Analista);
+		return view('main.Opciones.analista.Modificar')->with('Analista', $Analista);
         
     }
 

@@ -20,7 +20,7 @@ class ProgramaController extends Controller
         $Programa = new ProgramaModel;
         $Programa = ProgramaModel::all();
 		
-        return view('main.programacion.Lista') -> with('programa', $Programa);
+        return view('main.Modulo1.programacion.Lista') -> with('programa', $Programa);
     }
 	
     /**
@@ -84,7 +84,7 @@ class ProgramaController extends Controller
         $Programa = new ProgramaModel;
         $Programa = ProgramaModel::where('SubPartida',$id)->get();
 		
-		return view('main.programacion.Modificar')->with('programa', $Programa);
+		return view('main.Modulo1.programacion.Modificar')->with('programa', $Programa);
     }
 
     /**

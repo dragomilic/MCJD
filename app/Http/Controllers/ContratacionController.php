@@ -26,7 +26,7 @@ class ContratacionController extends Controller
         $Contratacion = new ContratacionModel;
         $Contratacion = ContratacionModel::all();
 		
-        return view('main.Contrataciones.Lista')
+        return view('main.Modulo2.Contrataciones.Lista')
 								->with('contrato', $Contratacion);
     }
 	
@@ -42,7 +42,7 @@ class ContratacionController extends Controller
 		$Proveedor = new ProveedorModel;
 		$Proveedor = ProveedorModel::all();
 		
-        return view('main.Contrataciones.Agregar')
+        return view('main.Modulo2.Contrataciones.Agregar')
         			-> with('analista', $Analista)
 					-> with('estatus', $Estatus)
 					-> with('proveedor', $Proveedor);
@@ -98,7 +98,7 @@ class ContratacionController extends Controller
 		$Pedido->Fecha = $request->Pedido_Monto;
 		$Pedido->save();
 		
-		return redirect()->route('MCJD.Contratacion.index');
+		return redirect()->route('MCJD.Modulo2.Contratacion.index');
     }
 
     /**
@@ -133,7 +133,7 @@ class ContratacionController extends Controller
         $Contrato = new ContratacionModel;
         $Contrato = ContratacionModel::where('id',$id)->first();
 		
-		return view('main.Contrataciones.Modificar')
+		return view('main.Modulo2.Contrataciones.Modificar')
 											->with('Contrato', $Contrato)
 											-> with('analista', $Analista)
 											-> with('estatus', $Estatus)

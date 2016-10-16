@@ -21,7 +21,7 @@ class ProveedorController extends Controller
         $Proveedor = new ProveedorModel;
 		$Proveedor = ProveedorModel::all();
         
-		return view('main.proveedor.Lista') -> with('proveedor', $Proveedor);
+		return view('main.Opciones.proveedor.Lista') -> with('proveedor', $Proveedor);
     }
 
     /**
