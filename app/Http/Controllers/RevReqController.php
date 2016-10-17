@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\RevReqModel;
+use App\ProgramaModel;
 
 class RevReqController extends Controller
 {
@@ -25,9 +26,14 @@ class RevReqController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
+    	$progra = new ProgramaModel;
+    	$progra->SubPartida = $id;
+    	 
+    	return view(' main.Modulo1.RevisionReq.Agregar')
+    												->with('progra', $progra);
     }
 
     /**
@@ -36,12 +42,12 @@ class RevReqController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id, Request $request)
     {
         //
         $RevReq = new RevReqModel;
 		
-		$RevReq->Codigo = $request->Codigo;
+		$RevReq->SubPartida = $id;
 		$RevReq->Analista = $request->Analista;
 		$RevReq->Traslado = $request->Traslado;
 		$RevReq->Estado = $request->Estado;
@@ -50,7 +56,7 @@ class RevReqController extends Controller
 		
         $RevReq->save();
 		
-		return redirect()->route('MCJD.RevisionReq.index');
+		return redirect()->route('MCJD.EstadoPrograma.index');
         
     }
 
@@ -63,12 +69,18 @@ class RevReqController extends Controller
     public function show($id)
     {
         //
+    	$progra = new ProgramaModel;
+    	$progra->SubPartida = $id;
+        /**/
+    	
         $rev_req = new RevReqModel;
-		$rev_req = RevReqModel::where('Codigo',$id)->first();
+		$rev_req = RevReqModel::where('SubPartida',$id)->get();
 		
-		return view('main.Modulo1.RevisionReq.Agregar') 
-								-> with('rev_req', $rev_req);
+		return view('main.Modulo1.RevisionReq.Mostrar')
+											-> with('rev_req', $rev_req)
+											->with('progra', $progra);
     }
+    
 
     /**
      * Show the form for editing the specified resource.

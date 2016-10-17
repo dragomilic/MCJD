@@ -7,13 +7,41 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
+		   <form action="{{ route('MCJD.Contratacion.show') }}" method="get" accept-charset="utf-8">
+		   	  <div class="form-inline">
+		   	  	
+		   	  	<div class="input-group">
+		   	  	  <select name="Columna" class="form-control">
+			    		<option>Codigo</option>
+						<option>SubPartida</option>
+				  </select>
+				</div>
+				
+				<div class="input-group">
+			      <input name="Busqueda" type="text" class="form-control" placeholder="Buscar">
+			      <div type="button" class="input-group-addon"><a class="glyphicon glyphicon-search"></a></div>
+			    </div>
+			    
+			  </div>
+			  
+			  @if ($mensaje != null)
+			  	<hr />
+    			<div class="alert alert-warning" role="alert">
+			  		{{ $mensaje }}
+			 	</div>
+			  @endif
+			  
+			  
+		   	  <hr/>
+		   </form>
+		   
 		   <form method="get" accept-charset="utf-8">
-		   		<a class="btn btn-primary btn-lg btn-block" href="AddContratacion" role="button">Agregar</a>
+		   		<a class="btn btn-primary btn-lg btn-block" href="{{ route('MCJD.Contratacion.Load', $progra->SubPartida) }}" role="button">Agregar</a>
 		   		<hr/>
 		   			<!---->
 		   		<table class="table table-striped">
 			    <tr>
-				  <td><strong>Codigo</strong></td>
+				  <td><strong>SubPartida</strong></td>
 				  <td><strong>Recibo</strong></td>
 				  <td><strong>Analista</strong></td>
 				  <td><strong>Tramite</strong></td>

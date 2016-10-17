@@ -9,20 +9,19 @@
 		<li>
 			<div class="link"><i class="fa fa-adjust"></i>Contrataciones<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="{{ route('MCJD.Contratacion.index') }}">Listado de contrataciones</a></li>
-				<li><a href="{{ route('MCJD.Contratacion.Load') }}">Registrar contratacion</a></li>
+				<li><a href="{{ route('MCJD.Contratacion.index2') }}">Estado de contrataciones</a></li>
 			</ul>
 		</li>
 		<li>
-			<div class="link"><i class="fa fa-codepen"></i>Control<i class="fa fa-chevron-down"></i></div>
+			<div class="link"><i class="fa fa-codepen"></i>Legal<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="{{ route('MCJD.Analista.index') }}">Lista de analistas</a></li>
-				<li><a href="#">Procesos por analista</a></li>
+				<li><a href="{{ route('MCJD.Legal.index') }}">Area legal</a></li>
 			</ul>
 		</li>
 		<li>
 			<div class="link"><i class="fa fa-bar-chart"></i>Administación<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
+				<li><a href="{{ route('MCJD.Analista.index') }}">Analistas</a></li>
 				<li><a href="{{ route('MCJD.Estatus.index') }}">Estados</a></li>
 				<li><a href="{{ route('MCJD.Proveedor.index') }}">Proveedor</a></li>
 			</ul>

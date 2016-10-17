@@ -12,6 +12,7 @@ use App\ProveedorModel;
 use App\ContratacionModel;
 use App\PedidoModel;
 use App\AdjudicadoModel;
+use App\ProgramaModel;
 
 class ContratacionController extends Controller
 {
@@ -23,42 +24,78 @@ class ContratacionController extends Controller
     public function index()
     {
         //
+    	/**/
+    	$Mensaje = null;
+    	/**/
         $Contratacion = new ContratacionModel;
         $Contratacion = ContratacionModel::all();
 		
         return view('main.Modulo2.Contrataciones.Lista')
-								->with('contrato', $Contratacion);
+								->with('contrato', $Contratacion)
+								-> with('mensaje', $Mensaje);
     }
-	
-	public function Load()
+    
+    public function Load($id)
     {
-        //
-        $Analista = new AnalistaModel;
-        $Analista = AnalistaModel::all();
-        
-		$Estatus = new EstatusModel;
-        $Estatus = EstatusModel::all();
-		
-		$Proveedor = new ProveedorModel;
-		$Proveedor = ProveedorModel::all();
-		
-        return view('main.Modulo2.Contrataciones.Agregar')
-        			-> with('analista', $Analista)
-					-> with('estatus', $Estatus)
-					-> with('proveedor', $Proveedor);
+    	$progra = new ProgramaModel;
+    	$progra->SubPartida = $id;
+    	/**/
+    	 
+    	$Analista = new AnalistaModel;
+    	$Analista = AnalistaModel::all();
+    	 
+    	$Estatus = new EstatusModel;
+    	$Estatus = EstatusModel::all();
+    	 
+    	$Proveedor = new ProveedorModel;
+    	$Proveedor = ProveedorModel::all();
+    	 
+    	return view('main.Modulo2.Contrataciones.Agregar')
+											    	->with('progra', $progra)
+											    	-> with('analista', $Analista)
+											    	-> with('estatus', $Estatus)
+											    	-> with('proveedor', $Proveedor);
     }
 	
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
+    	/**/
+    	$Mensaje = null;
+    	/**/
+    	$progra = new ProgramaModel;
+    	$progra->SubPartida = $id;
+    	
+    	/**/
+    	$Contratacion = new ContratacionModel;
+    	$Contratacion = ContratacionModel::where('SubPartida', $id)->get();
+    	
+    	return view(' main.Modulo2.Contrataciones.Lista')
+    													->with('progra', $progra)
+    													-> with('mensaje', $Mensaje)
+    													->with('contrato', $Contratacion);
         
     }
+    
+    public function index2()
+    {
+    	//
+    	/**/
+	    $Mensaje = null;
+	    /**/
+	    $Programa = new ProgramaModel;
+	    $Programa = ProgramaModel::all();
+	    
+	    return view('main.Modulo2.Contrataciones.Crear')
+									    -> with('programa', $Programa)
+									    -> with('mensaje', $Mensaje);
+    }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -66,7 +103,7 @@ class ContratacionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id, Request $request)
     {
         //
         
@@ -77,7 +114,7 @@ class ContratacionController extends Controller
 		$Proveedor = ProveedorModel::where('Nombre', $request->Cod_Proveedor)->first();
   
         $Contrato = new ContratacionModel;
-        $Contrato->Codigo = $request->Identificacion;
+        $Contrato->SubPartida = $id;
 		$Contrato->Recibo = $request->Recibo;
 		$Contrato->Analista = $Analista->Identificacion;
 		$Contrato->Tramite = $request->Cod_Estatus;
@@ -107,9 +144,35 @@ class ContratacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+    	//
+    	$Contrato = new ContratacionModel;
+    	
+    	if ($request->Columna == 'Codigo')
+    	{
+    		$Contrato = ContratacionModel::where('Codigo', $request->Busqueda)->get();
+    	}
+    	elseif ($request->Columna == 'SubPartida')
+    	{
+    		$Contrato = ContratacionModel::where('SubPartida', $request->Busqueda)->get();
+    	}
+    	else
+    		{
+    		//$Mensaje = 'Seleccion no valida';
+    	}
+    	
+    	if (count($Contrato) == 0)
+    	{
+    		$Mensaje = 'Busqueda sin resultados';
+    	}
+    	else {
+    		$Mensaje = null;
+    	}
+    	
+    	return view('main.Modulo1.Contrataciones.Crear')
+										    	-> with('contrato', $Contrato)
+										    	-> with('mensaje', $Mensaje);
     }
 
     /**

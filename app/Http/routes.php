@@ -49,30 +49,21 @@ Route::group(['prefix' => 'MCJD'], function(){
 				/**/
 				Route::get('BuscarEstadoPrograma',[ 'uses' => 'EstadoProgramaController@show', 'as'   => 'MCJD.EstadoPrograma.show'  ]);
 				
-			/* */
-			Route::resource('Estatus','EstatusController');
-				/**/
-				Route::get('AddEstatus', function () { return view('main.Modulo1.Estados.Agregar'); });
-				/**/
-				Route::get('NewEstatus',[ 'uses' => 'EstatusController@store', 'as'   => 'MCJD.Estatus.store'  ]);
-				/**/
-				Route::get('ListaEstatus',[ 'uses' => 'EstatusController@index', 'as'   => 'MCJD.Estatus.index'  ]);
-				/**/
-				Route::get('EliminarEstatus/{id}',[ 'uses' => 'EstatusController@destroy', 'as'   => 'MCJD.Estatus.destroy'  ]);
-				/**/
-				Route::get('Estatus/{id}/edit',[ 'uses' => 'EstatusController@edit', 'as'   => 'MCJD.Estatus.edit'  ]);
-				/**/
-				Route::get('ActualizarEstatus',[ 'uses' => 'EstatusController@update', 'as'   => 'MCJD.Estatus.update'  ]);
-				
 			/**/
 			Route::resource('RevReq','RevReqController');
 				/**/
 				Route::get('ListaRevReq',[  'uses' => 'RevReqController@index', 'as'   => 'MCJD.RevReq.index'  ]);
+				Route::get('Revision_requerimientos_Agregar/{id}',[ 'uses' => 'RevReqController@create', 'as'   => 'MCJD.RevReq.create'  ]);
+				Route::get('Revision_requerimientos_Save/{id}',[  'uses' => 'RevReqController@store', 'as'   => 'MCJD.RevReq.store'  ]);
+				Route::get('Revision_requerimientos/{id}',[  'uses' => 'RevReqController@show', 'as'   => 'MCJD.RevReq.show'  ]);
 				
 			/* */
 			Route::resource('AproVisa','AproVisaController');
 				/**/
 				Route::get('ListaAproVisa',[ 'uses' => 'AproVisaController@index', 'as'   => 'MCJD.AproVisa.index'  ]);
+				Route::get('AproVisa_Agregar/{id}',[ 'uses' => 'AproVisaController@create', 'as'   => 'MCJD.AproVisa.create'  ]);
+				Route::get('AproVisa_Save/{id}',[ 'uses' => 'AproVisaController@store', 'as'   => 'MCJD.AproVisa.store'  ]);
+				Route::get('Aprovacion_visado/{id}',[ 'uses' => 'AproVisaController@show', 'as'   => 'MCJD.AproVisa.show'  ]);
 			
 		});
 	
@@ -82,21 +73,36 @@ Route::group(['prefix' => 'MCJD'], function(){
 			/* */
 			Route::resource('Contratacion','ContratacionController');
 				/**/
-				Route::get('AddContratacion',[ 'uses' => 'ContratacionController@Load', 'as'   => 'MCJD.Contratacion.Load' ]);
+				Route::get('AddContratacion/{id}',[ 'uses' => 'ContratacionController@Load', 'as'   => 'MCJD.Contratacion.Load' ]);
 				/**/
 				Route::get('ListaContratacion',[ 'uses' => 'ContratacionController@index', 'as'   => 'MCJD.Contratacion.index'  ]);
 				/**/
-				Route::get('GuardarContratacion',[ 'uses' => 'ContratacionController@store', 'as'   => 'MCJD.Contratacion.store'  ]);
+				Route::get('GuardarContratacion/{id}',[ 'uses' => 'ContratacionController@store', 'as'   => 'MCJD.Contratacion.store'  ]);
+				/**/
+				Route::get('BuscarContratacion',[ 'uses' => 'ContratacionController@show', 'as'   => 'MCJD.Contratacion.show'  ]);
 				/**/
 				Route::get('EliminarContratacion/{id}',[ 'uses' => 'ContratacionController@destroy', 'as'   => 'MCJD.Contratacion.destroy'  ]);
 				/**/
 				Route::get('Contratacion/{id}/edit',[ 'uses' => 'ContratacionController@edit', 'as'   => 'MCJD.Contratacion.edit'  ]);
 				/**/
 				Route::get('ActualizarContratacion',[ 'uses' => 'ContratacionController@update', 'as'   => 'MCJD.Contratacion.update'  ]);
+				/**/
+				Route::get('CrearContratacion/{id}',[ 'uses' => 'ContratacionController@create', 'as'   => 'MCJD.Contratacion.create'  ]);
+				/**/
+				Route::get('ListarContratacion',[ 'uses' => 'ContratacionController@index2', 'as'   => 'MCJD.Contratacion.index2'  ]);
 		});
 		
 		Route::group(['prefix' => 'Legal'], function(){
-				
+			/**/
+			Route::get('Listado_Legal',[ 'uses' => 'LegalController@index', 'as'   => 'MCJD.Legal.index'  ]);
+			/**/
+			Route::get('Lista_Legal',[ 'uses' => 'LegalController@show', 'as'   => 'MCJD.Legal.show'  ]);
+			/**/
+			Route::get('Mostrar_Legal/{id}',[ 'uses' => 'LegalController@Load', 'as'   => 'MCJD.Legal.Load'  ]);
+			/**/
+			Route::get('Crear_Legal/{id}',[ 'uses' => 'LegalController@create', 'as'   => 'MCJD.Legal.create'  ]);
+			/**/
+			Route::get('Guardar_Legal/{id}',[ 'uses' => 'LegalController@store', 'as'   => 'MCJD.Legal.store'  ]);
 		});
 		
 		Route::group(['prefix' => 'Admin'], function(){
@@ -133,6 +139,21 @@ Route::group(['prefix' => 'MCJD'], function(){
 				Route::get('EliminarProveedor/{id}',[ 'uses' => 'ProveedorController@destroy', 'as'   => 'MCJD.Proveedor.destroy'  ]);
 				/**/
 				Route::get('Proveedor/{id}/edit',[ 'uses' => 'ProveedorController@edit', 'as'   => 'MCJD.Proveedor.edit'  ]);
+				
+			/* */
+			Route::resource('Estatus','EstatusController');
+				/**/
+				Route::get('AddEstatus', function () { return view('main.Modulo1.Estados.Agregar'); });
+				/**/
+				Route::get('NewEstatus',[ 'uses' => 'EstatusController@store', 'as'   => 'MCJD.Estatus.store'  ]);
+				/**/
+				Route::get('ListaEstatus',[ 'uses' => 'EstatusController@index', 'as'   => 'MCJD.Estatus.index'  ]);
+				/**/
+				Route::get('EliminarEstatus/{id}',[ 'uses' => 'EstatusController@destroy', 'as'   => 'MCJD.Estatus.destroy'  ]);
+				/**/
+				Route::get('Estatus/{id}/edit',[ 'uses' => 'EstatusController@edit', 'as'   => 'MCJD.Estatus.edit'  ]);
+				/**/
+				Route::get('ActualizarEstatus',[ 'uses' => 'EstatusController@update', 'as'   => 'MCJD.Estatus.update'  ]);
 				
 		});
 	

@@ -27,9 +27,7 @@
 					  <td>{{$Programa->Solicitud}}</td>
 					  <td>{{$Programa->Obj_cont_soli}}</td>
 					  <td>
-					  	<a href= "#" class="btn btn-primary" role="button">Procesos</a>
 					  	<a href= "{{ route('MCJD.Programa.edit', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Modificar</a>
-					  	<a href= "{{ route('MCJD.Programa.destroy', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Eliminar</a>
 					  </td>
 					</tr>
 				@endforeach

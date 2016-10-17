@@ -7,21 +7,21 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
-		   <form action="{{ route('MCJD.AproVisa.store') }}" method="get" accept-charset="utf-8">
+		   <form action="{{ route('MCJD.AproVisa.store', $progra->SubPartida) }}" method="get" accept-charset="utf-8">
 		   		
 		   	  <div class="form-group">
 		   	  	<label for="LbIdentificacion">Proveedor</label>
-		    	<input name="Codigo" type="text" class="form-control" placeholder="Codigo">
+		    	<input name="Proveedor" type="date" class="form-control" placeholder="Codigo">
 	    	  </div>
 	    	  
 	    	  <div class="form-group">
 		   	  	<label for="LbIdentificacion">Oficina de presupuesto</label>
-		    	<input name="Estado" type="text" class="form-control" placeholder="Estado">
+		    	<input name="Presupuesto" type="date" class="form-control" placeholder="Estado">
 	    	  </div>
 	    	  
 	    	  <div class="form-group">
 		   	  	<label for="LbIdentificacion">Area de contratación</label>
-		    	<input name="Motivo" type="text" class="form-control" placeholder="Motivo">
+		    	<input name="Area" type="date" class="form-control" placeholder="Motivo">
 	    	  </div>
 			  
 			  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>

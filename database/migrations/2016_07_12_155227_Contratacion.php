@@ -15,7 +15,7 @@ class Contratacion extends Migration
         //
         Schema::create('Contratacion', function(Blueprint $table){
         	$table->increments('id');
-			$table->integer('Codigo');
+			$table->integer('SubPartida');
 			$table->text('Recibo')->nullable();
 			$table->integer('Analista');
 			$table->text('Tramite')->nullable();

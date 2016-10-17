@@ -8,5 +8,5 @@ class AproVisaModel extends Model
 {
     //
     protected $table = 'Apro_Visa';
-	protected $fillable = ['id','Proveedor','Ofi_Presu','Area_contratacion'];
+	protected $fillable = ['id','SubPartida','Proveedor','Ofi_Presu','Area_contratacion'];
 }

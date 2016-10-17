@@ -7,7 +7,7 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
-		   <form action="{{ route('MCJD.RevReq.store') }}" method="get" accept-charset="utf-8">
+		   <form action="{{ route('MCJD.RevReq.store', $progra->SubPartida) }}" method="get" accept-charset="utf-8">
 		   		
 		   	  <div class="form-group">
 		   	  	<label for="LbIdentificacion">Codigo</label>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\AproVisaModel;
+use App\ProgramaModel;
 
 class AproVisaController extends Controller
 {
@@ -25,9 +26,14 @@ class AproVisaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
+    	$progra = new ProgramaModel;
+    	$progra->SubPartida = $id;
+    	
+    	return view(' main.Modulo1.AprobacionVisado.Agregar')
+														    	->with('progra', $progra);
     }
 
     /**
@@ -36,9 +42,19 @@ class AproVisaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id, Request $request)
     {
         //
+    	$AproVisa = new AproVisaModel;
+    	$AproVisa->SubPartida = $id;
+    	$AproVisa->Proveedor = $request->Proveedor;
+    	$AproVisa->Ofi_Presu = $request->Presupuesto;
+    	$AproVisa->Area_contratacion = $request->Area;
+    	
+    	$AproVisa->save();
+        
+    	return redirect()->route('MCJD.EstadoPrograma.index');
+        
     }
 
     /**
@@ -50,6 +66,15 @@ class AproVisaController extends Controller
     public function show($id)
     {
         //
+        $progra = new ProgramaModel;
+        $progra->SubPartida = $id;
+        /**/
+        $lista = new AproVisaModel;
+        $lista = AproVisaModel::where('SubPartida' ,$id)->get();
+        
+    	return view(' main.Modulo1.AprobacionVisado.Mostrar')
+    													->with('aprovisa', $lista)
+    													->with('progra', $progra);
     }
 
     /**

@@ -7,14 +7,13 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
-		   <form action="{{ route('MCJD.EstadoPrograma.show') }}" method="get" accept-charset="utf-8">
+		   <form action="{{ route('MCJD.Legal.show') }}" method="get" accept-charset="utf-8">
 		   	  <div class="form-inline">
 		   	  	
 		   	  	<div class="input-group">
 		   	  	  <select name="Columna" class="form-control">
 			    		<option>Codigo</option>
 						<option>SubPartida</option>
-					    <option>Solicitud</option>
 				  </select>
 				</div>
 				
@@ -54,8 +53,7 @@
 					  <td>{{$Programa->Solicitud}}</td>
 					  <td>{{$Programa->Obj_cont_soli}}</td>
 					  <td>
-					  	<a href= "{{ route('MCJD.RevReq.show', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Revisión de requisitos</a>
-					  	<a href= "{{ route('MCJD.AproVisa.show', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Aprobación y visado</a>
+					  	<a href= "{{ route('MCJD.Legal.Load', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Contrataciones</a>
 					  </td>
 					</tr>
 				@endforeach

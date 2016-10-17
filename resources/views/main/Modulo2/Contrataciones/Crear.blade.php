@@ -54,8 +54,7 @@
 					  <td>{{$Programa->Solicitud}}</td>
 					  <td>{{$Programa->Obj_cont_soli}}</td>
 					  <td>
-					  	<a href= "{{ route('MCJD.RevReq.show', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Revisión de requisitos</a>
-					  	<a href= "{{ route('MCJD.AproVisa.show', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Aprobación y visado</a>
+					  	<a href= "{{ route('MCJD.Contratacion.create', $Programa->SubPartida) }}" class="btn btn-primary" role="button">Contrataciones</a>
 					  </td>
 					</tr>
 				@endforeach

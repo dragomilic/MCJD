@@ -7,7 +7,7 @@
 		<div class="panel panel-default">
 		  <div class="panel-body">
 		   
-		   <form action="{{ route('MCJD.Contratacion.store') }}" method="get" accept-charset="utf-8">
+		   <form action="{{ route('MCJD.Contratacion.store', $progra->SubPartida) }}" method="get" accept-charset="utf-8">
 		   	
 		   		<!-- -->
 	    	  <table class="table">
@@ -63,8 +63,6 @@
 				  </td>
 				</tr>
 			  </table>
-			  <!-- -->
-			  <br />
 			  <!-- -->
 			   <hr/>
 			   
