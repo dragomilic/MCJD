@@ -10,7 +10,7 @@
 		   <form action="{{ route('MCJD.AproVisa.store', $progra->SubPartida) }}" method="get" accept-charset="utf-8">
 		   		
 		   	  <div class="form-group">
-		   	  	<label for="LbIdentificacion">Proveedor</label>
+		   	  	<label for="LbIdentificacion">Fecha Traslado a Proveedor</label>
 		    	<input name="Proveedor" type="date" class="form-control" placeholder="Codigo">
 	    	  </div>
 	    	  
@@ -20,7 +20,7 @@
 	    	  </div>
 	    	  
 	    	  <div class="form-group">
-		   	  	<label for="LbIdentificacion">Area de contrataciÃ³n</label>
+		   	  	<label for="LbIdentificacion">Fecha Traslado Área Contratación</label>
 		    	<input name="Area" type="date" class="form-control" placeholder="Motivo">
 	    	  </div>
 			  

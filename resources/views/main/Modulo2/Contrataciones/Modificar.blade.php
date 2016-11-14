@@ -11,12 +11,12 @@
 		   	
 		   	  <!-- -->
 		   	  <div class="form-group">
-		   	  	<label for="LbReciboArea">Recibo de area</label>
+		   	  	<label for="LbReciboArea">Recibido Área Contratación</label>
 		    	<input name="Identificacion" type="text" class="form-control" value={{$Contrato->Codigo}}>
 	    	  </div>
 
 	    	  <div class="form-group">
-		   	  	<label for="LbNumeroTramite">Numero de tramite</label>
+		   	  	<label for="LbNumeroTramite">Número de Trámite Contratación</label>
 		    	<input name="Recibo" type="text" class="form-control" value={{$Contrato->Recibo}}>
 	    	  </div>
 	    	  
@@ -29,9 +29,9 @@
 	    	  <!-- -->
 	    	  <table class="table">
 			    <tr>
-				  <td><strong>Analista</strong></td>
+				  <td><strong>Analista de Contratación</strong></td>
 				  <td><strong>Estado actual</strong></td>
-				  <td><strong>Proveedor</strong></td>
+				  <td><strong>Proveedor Adjudicado</strong></td>
 				</tr>
 				
 				<tr>

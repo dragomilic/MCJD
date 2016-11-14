@@ -1,4 +1,4 @@
-@extends('Plantilla.Interfaz')
+q@extends('Plantilla.Interfaz')
 
 @section('title', 'Nueva contrataciÃ³n')
 
@@ -12,8 +12,8 @@
 		   		<!-- -->
 	    	  <table class="table">
 			    <tr>
-				  <td><strong>Recibo de area</strong></td>
-				  <td><strong>Numero de tramite</strong></td>
+				  <td><strong>Recibido Área Contratación</strong></td>
+				  <td><strong>Número de Trámite Contratación</strong></td>
 				  <td><strong>Apertura</strong></td>
 				</tr>
 				
@@ -34,9 +34,9 @@
 	    	  <!-- -->
 	    	  <table class="table">
 			    <tr>
-				  <td><strong>Analista</strong></td>
+				  <td><strong>Analista de Contratación</strong></td>
 				  <td><strong>Estado actual</strong></td>
-				  <td><strong>Proveedor</strong></td>
+				  <td><strong>Proveedor Adjudicado</strong></td>
 				</tr>
 				
 				<tr>

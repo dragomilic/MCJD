@@ -46,7 +46,7 @@
 				  <td><strong>Analista</strong></td>
 				  <td><strong>Tramite</strong></td>
 				  <td><strong>Apertura</strong></td>
-				  <td><strong>Proveedor</strong></td>
+				  <td><strong>Proveedor Adjudicado</strong></td>
 				  <td><strong>Funciones</strong></td>
 				</tr>
 				
