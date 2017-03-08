@@ -18,6 +18,7 @@ class Pedido extends Migration
 			$table->bigInteger('Numero')->nullable();
 			$table->text('Total')->nullable();
 			$table->date('Fecha')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

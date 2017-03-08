@@ -18,6 +18,7 @@ class Legal extends Migration
 			$table->integer('SubPartida');
 			$table->text('Envio')->nullable();
 			$table->text('Recibido')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

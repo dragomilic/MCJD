@@ -18,6 +18,7 @@ class Adjudicado extends Migration
 			$table->integer('Codigo');
 			$table->double('Monto',15,3)->nullable();
 			$table->double('Diferencia',15,3)->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

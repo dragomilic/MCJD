@@ -8,5 +8,5 @@ class ProgramaModel extends Model
 {
     //
     protected $table = 'Programas';
-	protected $fillable = ['id', 'Codigo', 'SubPartida','Solicitud','Obj_cont_soli','Monto','Oficio_ini','PC'];
+	protected $fillable = ['id', 'Codigo', 'SubPartida','Solicitud','Obj_cont_soli','Monto','Oficio_ini','PC', 'Comentario'];
 }

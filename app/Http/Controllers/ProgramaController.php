@@ -51,7 +51,7 @@ class ProgramaController extends Controller
 		$Programa->Monto = $request->Monto;
 		$Programa->PC = $request->PC;
 		$Programa->Oficio_ini = $request->NumOficio;
-		
+		$Programa->Comentario = $request->Comentario;
 		
 		//DD($Programa);
 		

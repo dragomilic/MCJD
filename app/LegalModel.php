@@ -8,5 +8,5 @@ class LegalModel extends Model
 {
     //
 	protected $table = 'Legal';
-	protected $fillable = ['id','SubPartida','Envio','Recibido'];
+	protected $fillable = ['id','SubPartida','Envio','Recibido', 'Comentario'];
 }

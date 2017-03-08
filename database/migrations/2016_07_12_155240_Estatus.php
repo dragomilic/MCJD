@@ -18,6 +18,7 @@ class Estatus extends Migration
 			$table->integer('Codigo');
 			$table->text('Estado')->nullable();
 			$table->text('Motivo')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

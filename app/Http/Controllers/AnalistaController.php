@@ -49,6 +49,8 @@ class AnalistaController extends Controller
 		$Analista->Nombre = $request->Nombre;
 		$Analista->PrimerApellido = $request->PrimerApellido;
 		$Analista->SegundoApellido = $request->SegundoApellido;
+		$Analista->Comentario = $request->Comentario;
+		
 		
         $Analista->save();
 		

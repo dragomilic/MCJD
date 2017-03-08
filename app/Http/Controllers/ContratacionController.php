@@ -120,6 +120,7 @@ class ContratacionController extends Controller
 		$Contrato->Tramite = $request->Cod_Estatus;
 		$Contrato->Apertura = $request->Apertura;
 		$Contrato->Cod_Proveedor = $Proveedor->Identificacion;
+		$Contrato->Comentario = $request->Comentario;
         $Contrato->save();
 		
 		/**/
@@ -127,12 +128,14 @@ class ContratacionController extends Controller
 		$Adjudicado->Codigo = $request->Identificacion;
 		$Adjudicado->Monto = $request->Adjudicado_Monto;
 		$Adjudicado->Diferencia = $request->Adjudicado_Diferencia;
+		$Adjudicado->Comentario = $request->Comentario;
 		$Adjudicado->save();
 		/**/
 		$Pedido = new PedidoModel;
 		$Pedido->Numero = $request->Pedido_Numero;
 		$Pedido->Total = $request->Pedido_Fecha;
 		$Pedido->Fecha = $request->Pedido_Monto;
+		$Pedido->Comentario = $request->Comentario;
 		$Pedido->save();
 		
 		return redirect()->route('MCJD.Modulo2.Contratacion.index');

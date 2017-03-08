@@ -52,6 +52,12 @@
 				  </td>
 				</tr>
 			   </table>
+			   
+			   <div class="form-group">
+			   <label for="">Comentario</label>
+			   <textarea name="Comentario" class="form-control" placeholder="Comentario" rows="3"></textarea>
+			   </div>
+			   
 			  <hr/>
 			  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  

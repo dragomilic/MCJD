@@ -8,5 +8,5 @@ class PedidoModel extends Model
 {
     //
     protected $table = 'Pedido';
-	protected $fillable = ['id','Numero','Total','Fecha'];
+	protected $fillable = ['id','Numero','Total','Fecha', 'Comentario'];
 }

@@ -1,4 +1,4 @@
-q@extends('Plantilla.Interfaz')
+@extends('Plantilla.Interfaz')
 
 @section('title', 'Nueva contratación')
 
@@ -121,12 +121,17 @@ q@extends('Plantilla.Interfaz')
 			   </div>
 			   <!-- -->
 			   
+			   <div class="form-group">
+			   <label for="">Comentario</label>
+			   <textarea name="Comentario" class="form-control" placeholder="Comentario" rows="3"></textarea>
+			   </div>
+			   
+			   
 			   <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  
 		   </form>
 		  </div>
 	   </div>
 	</div>
-	
 	
 @endsection

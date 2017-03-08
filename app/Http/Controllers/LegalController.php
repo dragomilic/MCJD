@@ -31,11 +31,15 @@ class LegalController extends Controller
     
     	if ($request->Columna == 'Codigo')
     	{
-    		$Programa = ProgramaModel::where('Codigo', $request->Busqueda)->get();
+    		$Programa = ProgramaModel::where('Codigo', $request->Busqueda)
+						    		->orderBy('id', 'asc')
+						    		->get();
     	}
     	elseif ($request->Columna == 'SubPartida')
     	{
-    		$Programa = ProgramaModel::where('SubPartida', $request->Busqueda)->get();
+    		$Programa = ProgramaModel::where('SubPartida', $request->Busqueda)
+    								->orderBy('id', 'asc')
+    								->get();
     	}
     	else
     		{

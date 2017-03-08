@@ -21,6 +21,7 @@ class RevReq extends Migration
 			$table->text('Estado')->nullable();
 			$table->integer('Tramite')->nullable();
 			$table->text('Observaciones')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

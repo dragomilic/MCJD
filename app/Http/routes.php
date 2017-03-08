@@ -143,7 +143,7 @@ Route::group(['prefix' => 'MCJD'], function(){
 			/* */
 			Route::resource('Estatus','EstatusController');
 				/**/
-				Route::get('AddEstatus', function () { return view('main.Modulo1.Estados.Agregar'); });
+				Route::get('AddEstatus', function () { return view('main.Opciones.Estados.Agregar'); });
 				/**/
 				Route::get('NewEstatus',[ 'uses' => 'EstatusController@store', 'as'   => 'MCJD.Estatus.store'  ]);
 				/**/
@@ -156,5 +156,15 @@ Route::group(['prefix' => 'MCJD'], function(){
 				Route::get('ActualizarEstatus',[ 'uses' => 'EstatusController@update', 'as'   => 'MCJD.Estatus.update'  ]);
 				
 		});
+		
+			Route::group(['prefix' => 'Reportes'], function(){
+				/**/
+				Route::get('EstadisticasInterventores',[ 'uses' => 'ReportesController@EstadisticasInterventores', 'as'   => 'MCJD.Reportes.EstadisticasInterventores'  ]);
+				/**/
+				Route::get('PromedioContratacion',[ 'uses' => 'ReportesController@PromedioContratacion', 'as'   => 'MCJD.Reportes.PromedioContratacion'  ]);
+				/**/
+				Route::get('TiemposContrataciones',[ 'uses' => 'ReportesController@TiemposContrataciones', 'as'   => 'MCJD.Reportes.TiemposContrataciones'  ]);
+				
+			});
 	
 });

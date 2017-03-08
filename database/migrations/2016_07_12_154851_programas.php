@@ -22,6 +22,7 @@ class Programas extends Migration
 			$table->double('Monto',15,3)->nullable();
 			$table->integer('PC')->nullable();
 			$table->integer('Oficio_ini')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

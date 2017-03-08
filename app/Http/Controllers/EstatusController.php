@@ -47,7 +47,7 @@ class EstatusController extends Controller
 		$Estatus->Codigo = $request->Codigo;
 		$Estatus->Estado = $request->Estado;
 		$Estatus->Motivo = $request->Motivo;
-		
+		$Estatus->Comentario = $request->Comentario;
         $Estatus->save();
 		
 		return redirect()->route('MCJD.Estatus.index');

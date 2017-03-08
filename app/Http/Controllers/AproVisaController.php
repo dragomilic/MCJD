@@ -50,6 +50,7 @@ class AproVisaController extends Controller
     	$AproVisa->Proveedor = $request->Proveedor;
     	$AproVisa->Ofi_Presu = $request->Presupuesto;
     	$AproVisa->Area_contratacion = $request->Area;
+    	$AproVisa->Comentario = $request->Comentario;
     	
     	$AproVisa->save();
         

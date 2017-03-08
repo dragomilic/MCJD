@@ -53,6 +53,7 @@ class RevReqController extends Controller
 		$RevReq->Estado = $request->Estado;
 		$RevReq->Tramite = $request->Tramite;
 		$RevReq->Observaciones = $request->Observaciones;
+		$RevReq->Comentario = $request->Comentario;
 		
         $RevReq->save();
 		

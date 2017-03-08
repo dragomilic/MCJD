@@ -8,5 +8,5 @@ class ContratacionModel extends Model
 {
     //
     protected $table = 'Contratacion';
-	protected $fillable = ['id','SubPartida','Recibo','Analista','Tramite','Apertura','Cod_Proveedor'];
+	protected $fillable = ['id','SubPartida','Recibo','Analista','Tramite','Apertura','Cod_Proveedor', 'Comentario'];
 }

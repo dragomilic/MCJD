@@ -23,6 +23,11 @@
 		   	  	<label for="LbIdentificacion">Fecha Traslado Área Contratación</label>
 		    	<input name="Area" type="date" class="form-control" placeholder="Motivo">
 	    	  </div>
+	    	  
+	    	  <div class="form-group">
+			   <label for="">Comentario</label>
+			   <textarea name="Comentario" class="form-control" placeholder="Comentario" rows="3"></textarea>
+			   </div>
 			  
 			  <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  

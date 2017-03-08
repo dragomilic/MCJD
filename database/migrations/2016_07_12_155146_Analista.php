@@ -19,6 +19,7 @@ class Analista extends Migration
 			$table->text('Nombre')->nullable();
 			$table->text('PrimerApellido')->nullable();
 			$table->text('SegundoApellido')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

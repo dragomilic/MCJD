@@ -50,6 +50,7 @@ class ProveedorController extends Controller
 		$Proveedor->Direccion = $request->Direccion;
 		$Proveedor->Telefono = $request->Telefono;
 		$Proveedor->fax = $request->Fax;
+		$Proveedor->Comentario = $request->Comentario;
 		
         $Proveedor->save();
 		

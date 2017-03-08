@@ -19,6 +19,7 @@ class AproVisa extends Migration
 			$table->Integer('Proveedor');
 			$table->text('Ofi_Presu')->nullable();
 			$table->text('Area_contratacion')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

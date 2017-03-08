@@ -18,6 +18,11 @@
 		   	  	<label for="LbIdentificacion">Recibido contrato aprobado</label>
 		    	<input name="Recibido" type="text" class="form-control" placeholder="Motivo">
 	    	  </div>
+	    	  
+	    	  <div class="form-group">
+			   <label for="">Comentario</label>
+			   <textarea name="Comentario" class="form-control" placeholder="Comentario" rows="3"></textarea>
+			   </div>
 			  
 			  <button type="Recibido" class="btn btn-primary btn-lg btn-block">Guardar</button>
 			  

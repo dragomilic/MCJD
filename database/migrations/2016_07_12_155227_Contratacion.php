@@ -21,6 +21,7 @@ class Contratacion extends Migration
 			$table->text('Tramite')->nullable();
 			$table->date('Apertura')->nullable();
 			$table->integer('Cod_Proveedor');
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }

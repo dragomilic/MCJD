@@ -20,6 +20,7 @@ class Proveedor extends Migration
 			$table->text('Direccion')->nullable();
 			$table->double('Telefono')->nullable();
 			$table->integer('fax')->nullable();
+			$table->text('Comentario')->nullable();
 			$table->timestamps();
         });
     }
