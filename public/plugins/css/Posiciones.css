@@ -22,7 +22,10 @@ body
      margin-left: 30px;
      width: 68%;
 }
-
+.Header
+{
+	margin: 5px;
+}
 .Login
 {
 	/**/

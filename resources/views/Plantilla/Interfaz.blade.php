@@ -18,7 +18,10 @@
 </head>
 	<!-- Encabezado -->
 	<header>
-		
+		<div class="Header">
+			<img src="http://www.mcj.go.cr/images/logo.jpg" 
+				 alt="" />
+		</div>
 	</header>
 	<div id="name">
 	  
