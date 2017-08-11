@@ -23,15 +23,17 @@
 				 alt="" />
 		</div>
 	</header>
+
 	<div id="name">
 	  
 	</div>
-	<!-- Menu Vertical-->
+		<!-- Menu Vertical-->
+
 		<div>
 			@include('Menu.Nav')
 		</div>
 		
-	@yield('pantalla')
+		@yield('pantalla')
 	
 	<!-- -->
 	<script src="{{ asset('plugins/js/jquery.js') }}"></script>
