@@ -74,9 +74,9 @@ class EstatusController extends Controller
     {
         //
         $Estatus = new EstatusModel;
-        $Estatus = EstatusModel::where('id',$id)->first();
+        $Estatus = EstatusModel::where('Codigo',$id)->first();
 		
-		return view('main.Opciones.Modulo1.Estados.Modificar')->with('Estatus', $Estatus);
+		return view('main.Opciones.Estados.Modificar')->with('Estatus', $Estatus);
     }
 
     /**
